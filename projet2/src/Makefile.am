@@ -12,7 +12,8 @@ projet2_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	BureauVote.c BureauVote.h
+	BureauVote.c BureauVote.h \
+	gesrec.c gesrec.h
 
 projet2_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 

@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "gesrec.h"
 
 char Idbureau[50]="";
 
@@ -103,9 +104,26 @@ p.capobs= gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(input3));
 strcpy(p.adr,gtk_combo_box_get_active_text(GTK_COMBO_BOX(input4)));
 strcpy(p.idagentb,gtk_entry_get_text(GTK_ENTRY(input5)));
 
-if(gtk_toggle_button_get_active(GTK_CHECK_BUTTON(checkbutton_ajout_BV))){
+if(gtk_toggle_button_get_active(GTK_CHECK_BUTTON(checkbutton_ajout_BV)))
+{
+if((strlen(p.idbureau)==3)&&(strlen(p.idagentb)==3))
+{
 ajouterbureau(p,"bv.txt");
-gtk_label_set_text(output,"Vous pouvez ajouter un autre bureau de vote");}
+gtk_label_set_text(output,"Vous pouvez ajouter un autre bureau de vote");
+}
+else if((strlen(p.idbureau)!=3)&&(strlen(p.idagentb)==3))
+{
+gtk_label_set_text(output,"L'identifiant du bureau doit contenir 3 caractères");
+}
+else if((strlen(p.idbureau)==3)&&(strlen(p.idagentb)!=3))
+{
+gtk_label_set_text(output,"L'identifiant de l'agent du bureau doit contenir 3 caractères");
+}
+else
+{
+gtk_label_set_text(output,"L'identifiant du bureau et de l'agent doivent contenir chacun 3 caractères");
+}
+}
 else
 {
 pInfo=gtk_message_dialog_new(GTK_WINDOW(user_data),GTK_DIALOG_MODAL,GTK_MESSAGE_ERROR,GTK_BUTTONS_OK,"Confirmation requise");
@@ -717,12 +735,7 @@ on_button__clicked                     (GtkButton       *button,
 }
 
 
-void
-on_Accueil_EO_clicked                  (GtkButton       *button,
-                                        gpointer         user_data)
-{
 
-}
 
 
 void
@@ -813,5 +826,581 @@ gtk_widget_destroy(Administrateur);
 Accueil=lookup_widget(button,"Accueil");
 Accueil=create_Accueil();
 gtk_widget_show(Accueil);
+}
+/*****************************************************************************
+*********************************FEDI*****************************************
+***************************Gestion_Reclamation*******************************/
+int x_fedi;
+int y_fedi;
+int z_fedi;
+int t_fedi;
+int affichage_init_fedi=0;
+int affichage_tree_fedi = 0;
+char Idrec[50]="";
+
+void
+on_Accueil_EO_clicked                  (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowaff, *windowacc;
+windowacc=lookup_widget(button,"Accueil");
+gtk_widget_destroy(windowacc);
+windowaff=create_login_rec();
+gtk_widget_show (windowaff);
+}
+
+void
+on_aff_ges_rec_clicked                 (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *tree,*windowaffich;
+windowaffich=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaffich);
+windowaffich=create_Gestion_Reclamation();
+tree=lookup_widget(windowaffich,"treeview_gest_rec");
+
+affichagereclamation(tree);
+
+gtk_widget_hide(windowaffich);
+gtk_widget_show(windowaffich);
+}
+
+
+gboolean
+on_Gestion_Reclamation_focus_in_event  (GtkWidget       *widget,
+                                        GdkEventFocus   *event,
+                                        gpointer         user_data)
+{
+if (affichage_tree_fedi==0)
+{
+strcpy(Idrec,"");
+GtkWidget *tree;
+
+tree =  lookup_widget(widget,"treeview_gest_rec");
+
+affichagereclamation(tree);
+}
+
+affichage_tree_fedi = 1;
+  return FALSE;
+}
+
+
+void
+on_treeview_gest_rec_row_activated     (GtkTreeView     *treeview,
+                                        GtkTreePath     *path,
+                                        GtkTreeViewColumn *column,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_entry_recherche_ges_rec_changed     (GtkEditable     *editable,
+                                        gpointer         user_data)
+{
+GtkWidget *entryRecherche=lookup_widget(GTK_WIDGET(editable),"entry_recherche_ges_rec");
+ char idchercherec[30]="";
+ char fichierrec[20]="Reclamation.txt";
+
+ GtkWidget *tree;
+ tree = lookup_widget(editable,"treeview_gest_rec");
+ strcpy(idchercherec,gtk_entry_get_text(entryRecherche));
+
+ recherche_rec(tree,idchercherec);
+}
+
+
+void
+on_button_retour13_clicked             (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowaff, *windowacc;
+windowaff=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaff);
+windowacc=create_Accueil();
+gtk_widget_show (windowacc);
+}
+
+
+void
+on_quitter8_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowaff, *windowacc;
+windowaff=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaff);
+windowacc=create_login_rec();
+gtk_widget_show (windowacc);
+}
+
+
+void
+on_button_fct1_fedi_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowinf,*windowaff ;
+windowaff=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaff);
+windowinf=create_fct1_fedi();
+gtk_widget_show (windowinf);
+}
+
+
+void
+on_button_fct2_fedi_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowinf, *windowaff;
+windowaff=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaff);
+windowinf=create_fct2_fedi();
+gtk_widget_show (windowinf);
+}
+
+
+void
+on_ajouter_gest_rec_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *windowaff;
+windowaff=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaff);
+windowajout=create_Ajout_gest_rec();
+gtk_widget_show (windowajout);
+}
+
+
+void
+on_Modifier_gest_rec_clicked           (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowaffich, *windowaff;
+windowaff=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaff);
+windowaffich=create_Modifie_gest_rec();
+gtk_widget_show (windowaffich);
+}
+
+
+void
+on_Supprimer_gest_rec_clicked          (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowsup, *windowaff;
+windowaff=lookup_widget(button,"Gestion_Reclamation");
+gtk_widget_destroy(windowaff);
+windowsup=create_Supprimer_ges_rec();
+gtk_widget_show (windowsup);
+}
+/************************Ajout_rec******************************************/
+
+void
+on_button_retour23_clicked             (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *tree;
+windowajout=lookup_widget(button,"Ajout_gest_rec");
+gtk_widget_destroy(windowajout);
+windowajout=create_Gestion_Reclamation();
+gtk_widget_show (windowajout);
+tree=lookup_widget(windowajout,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+
+
+void
+on_radiobutton_ajout_rec1_toggled      (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{x_fedi=1;}
+}
+
+
+void
+on_checkbutton_fedi1_toggled           (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{y_fedi=1;}
+}
+
+
+void
+on_Enregistrer_ajout_rec_clicked       (GtkButton       *button,
+                                        gpointer         user_data)
+{
+if (y_fedi==1)
+{
+Reclamation a;
+
+int errorIdr;
+
+
+GtkWidget *windowajout, *output, *tree, *windowaffich,*idr,*nom,*prenom,*jour,*mois,*annee,*IDliste,*objet,*contenu,*deg_imp;
+windowajout=create_Ajout_gest_rec();
+windowaffich=create_Gestion_Reclamation();
+idr = lookup_widget(button,"entry_ID_ajout_rec");
+nom = lookup_widget(button,"entry_Nom_ajout_rec");
+prenom = lookup_widget(button,"entry_prenom_ajout_rec");
+IDliste = lookup_widget(button,"combobox_ajout_rec");
+jour = lookup_widget(button,"jour_ajout_rec");
+mois = lookup_widget(button,"mois_ajout_rec");
+annee = lookup_widget(button,"Annee_ajout_rec");
+objet = lookup_widget(button,"entry_objet_ajout_rec");
+contenu = lookup_widget(button,"entry_contenu_ajout_rec");
+output=lookup_widget(button,"label_error_ajout_fedi");
+
+
+strcpy(a.idr,gtk_entry_get_text(GTK_ENTRY(idr)));
+strcpy(a.nom,gtk_entry_get_text(GTK_ENTRY(nom)));
+strcpy(a.prenom,gtk_entry_get_text(GTK_ENTRY(prenom)));
+strcpy(a.IDliste,gtk_combo_box_get_active_text(GTK_COMBO_BOX(IDliste)));
+a.date.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (jour));
+a.date.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (mois));
+a.date.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (annee));
+strcpy(a.objet,gtk_entry_get_text(GTK_ENTRY(objet)));
+strcpy(a.contenu,gtk_entry_get_text(GTK_ENTRY(contenu)));
+if(x_fedi==1 )
+{strcpy(a.deg_imp,"Faible");} 
+else if (x_fedi==2)
+{strcpy(a.deg_imp,"Moyen");}
+else
+{strcpy(a.deg_imp,"Elevé");} 
+errorIdr =verifnum(a.idr, 3);
+if(errorIdr==1)
+{
+gtk_label_set_text(GTK_LABEL(output),"Lidentifiant doit contenir trois chiffres");
+}
+else
+{
+
+ajouter_rec(a);
+
+x_fedi=0;
+
+
+windowajout=lookup_widget(button,"Ajout_gest_rec");
+gtk_widget_destroy(windowajout);
+windowajout=create_Gestion_Reclamation();
+gtk_widget_show(windowajout);
+tree=lookup_widget(windowajout,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+
+}
+y_fedi=0;
+}
+
+
+void
+on_quitter18_clicked                   (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *windowacc;
+windowajout=lookup_widget(button,"Ajout_gest_rec");
+gtk_widget_destroy(windowajout);
+windowacc=create_login_rec();
+gtk_widget_show (windowacc);
+}
+
+
+void
+on_Annuler_ajout_rec_clicked           (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *tree;
+windowajout=lookup_widget(button,"Ajout_gest_rec");
+gtk_widget_destroy(windowajout);
+windowajout=create_Gestion_Reclamation();
+gtk_widget_show (windowajout);
+tree=lookup_widget(windowajout,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+
+
+void
+on_radiobutton_ajout_rec2_toggled      (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{x_fedi=2;}
+}
+
+
+
+void
+on_radiobutton_ajout_rec3_toggled      (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{x_fedi=3;}
+}
+/****************************Modif_rec************************************/
+
+void
+on_radiobutton_modifie_rec3_toggled    (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{z_fedi=3;}
+}
+
+
+void
+on_button_retour_24_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *tree;
+windowajout=lookup_widget(button,"Modifie_gest_rec");
+gtk_widget_destroy(windowajout);
+windowajout=create_Gestion_Reclamation();
+gtk_widget_show (windowajout);
+tree=lookup_widget(windowajout,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+
+
+void
+on_quitter19_clicked                   (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *windowacc;
+windowajout=lookup_widget(button,"Modifie_gest_rec");
+gtk_widget_destroy(windowajout);
+windowacc=create_login_rec();
+gtk_widget_show (windowacc);
+}
+
+
+void
+on_radiobutton_modifie_rec1_toggled    (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{z_fedi=1;}
+}
+
+
+void
+on_radiobutton_modifie_rec2_toggled    (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{z_fedi=2;}
+}
+
+
+void
+on_checkbutton_fedi2_toggled           (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{t_fedi=1;}
+}
+
+
+void
+on_Enregistrer_modifie_rec_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+if (t_fedi==1)
+{
+Reclamation a1;
+GtkWidget *windowmodif,*tree, *windowaffich,*idr1,*nom1,*prenom1,*jour1,*mois1,*annee1,*IDliste1,*objet1,*contenu1,*deg_imp1;
+windowmodif=create_Modifie_gest_rec();
+windowaffich=create_Gestion_Reclamation();
+idr1 = lookup_widget(button,"entry_ID_modifie_rec");
+nom1 = lookup_widget(button,"entry_Nom_modifie_rec");
+prenom1 = lookup_widget(button,"entry_prenom_modifie_rec");
+IDliste1=lookup_widget(button,"combobox_modifie_rec");
+jour1 = lookup_widget(button,"jour_modifie_rec");
+mois1 = lookup_widget(button,"mois_modifie_rec");
+annee1 = lookup_widget(button,"Annee_modifie_rec");
+objet1 = lookup_widget(button,"entry_objet_modifie_rec");
+contenu1 = lookup_widget(button,"entry_contenu_modifie_rec");
+strcpy(a1.idr,gtk_entry_get_text(GTK_ENTRY(idr1)));
+strcpy(a1.nom,gtk_entry_get_text(GTK_ENTRY(nom1)));
+strcpy(a1.prenom,gtk_entry_get_text(GTK_ENTRY(prenom1)));
+strcpy(a1.IDliste,gtk_combo_box_get_active_text(GTK_COMBO_BOX(IDliste1)));
+a1.date.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (jour1));
+a1.date.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (mois1));
+a1.date.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (annee1));
+strcpy(a1.objet,gtk_entry_get_text(GTK_ENTRY(objet1)));
+strcpy(a1.contenu,gtk_entry_get_text(GTK_ENTRY(contenu1)));
+if(z_fedi==1 )
+{strcpy(a1.deg_imp,"Faible");} 
+else if (z_fedi==2)
+{strcpy(a1.deg_imp,"Moyen");}
+else
+{strcpy(a1.deg_imp,"Elevé");}
+modifier_rec(a1);
+z_fedi=0;
+
+windowmodif=lookup_widget(button,"Modifie_gest_rec");
+gtk_widget_destroy(windowmodif);
+windowmodif=create_Gestion_Reclamation();
+gtk_widget_show (windowmodif);
+tree=lookup_widget(windowmodif,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+t_fedi=0;
+}
+
+
+void
+on_Annuler_modifie_rec_clicked         (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *tree;
+windowajout=lookup_widget(button,"Modifie_gest_rec");
+gtk_widget_destroy(windowajout);
+windowajout=create_Gestion_Reclamation();
+gtk_widget_show (windowajout);
+tree=lookup_widget(windowajout,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+/******************************Supp_rec**********************************/
+
+
+void
+on_retour_supp_ges_rec_clicked         (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *tree;
+windowajout=lookup_widget(button,"Supprimer_ges_rec");
+gtk_widget_destroy(windowajout);
+windowajout=create_Gestion_Reclamation();
+gtk_widget_show (windowajout);
+tree=lookup_widget(windowajout,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+
+
+void
+on_supp_ges_rec_clicked                (GtkButton       *button,
+                                        gpointer         user_data)
+{
+char identi[20];
+GtkWidget *windowsup, *windowaffich, *iden,*tree;
+iden = lookup_widget(button,"entry_supp_ges_rec");
+strcpy(identi,gtk_entry_get_text(GTK_ENTRY(iden)));
+supprimer_rec(identi);
+
+windowsup=lookup_widget(button,"Supprimer_ges_rec");
+gtk_widget_destroy(windowsup);
+windowsup=create_Gestion_Reclamation();
+gtk_widget_show(windowsup);
+tree=lookup_widget(windowsup,"treeview_gest_rec");
+affichagereclamation(tree);
+}
+
+/****************************STAT_Fedi***********************************/
+
+void
+on_retour_fct1_fedi_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_act_fct1_fedi_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+float x;
+char text[50];
+GtkWidget *output;
+x=TVB("votes.txt");
+output=lookup_widget(button,"label_fct1_fedi");
+sprintf(text,"Le Taux de Votes Blancs est de %.2f pourcent \n",x*100);
+gtk_label_set_text(GTK_LABEL(output),text);
+}
+
+
+void
+on_retour_fct2_fedi_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_act1_fct2_fedi_clicked              (GtkButton       *button,
+                                        gpointer         user_data)
+{
+char text[1000];
+GtkWidget *output;
+output=lookup_widget(button,"label1_fct2_fedi");
+int nb[50];
+char b[1000];
+nbreclamation( nb, "listeelectorale.txt","Reclamation.txt");
+FILE * f=fopen("nbrrec.txt", "r");
+     if(f!=NULL)
+     {
+         while(fgets(b,1000,f)!=NULL)
+        {
+            sprintf(text,"%s",b);
+	   gtk_label_set_text(GTK_LABEL(output),text);
+        }
+         fclose(f);
+     }
+}
+
+
+void
+on_act2_fct2_fedi_clicked              (GtkButton       *button,
+                                        gpointer         user_data)
+{
+char text[1000];
+GtkWidget *output;
+output=lookup_widget(button,"label2_fct2_fedi");
+int n;
+n=nombre("Reclamation.txt");
+sprintf(text,"Le Nombre Total de Réclamations est de %d ",n);
+gtk_label_set_text(GTK_LABEL(output),text);
+}
+
+
+void
+on_button_cnx_login_rec_clicked        (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *login_rec,*Gestion_rec;
+ GtkWidget *user,*pass,*resultat; 
+char username[20]; 
+char password[20];
+char text9[50];
+user= lookup_widget(button,"entry_ID_login_rec");
+pass = lookup_widget(button,"entry_mdp_login_rec");
+strcpy(username,gtk_entry_get_text(GTK_ENTRY(user)));
+strcpy(password,gtk_entry_get_text(GTK_ENTRY(pass))); 
+if ((strcmp(username,"Baccar_Fedi")==0) && (strcmp (password,"rec")==0)) 
+{
+login_rec=lookup_widget(button,"login_rec");
+Gestion_rec = create_Gestion_Reclamation (); 
+gtk_widget_show (Gestion_rec);
+gtk_widget_destroy(login_rec); }
+else {
+resultat=lookup_widget(button,"label_login_rec");
+strcpy(text9,"Observateur n'est pas trouvé");
+gtk_label_set_text(GTK_LABEL(resultat),text9);
+}
+}
+
+
+void
+on_retour_login_rec_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowlog, *windowacc;
+windowlog=lookup_widget(button,"login_rec");
+gtk_widget_destroy(windowlog);
+windowacc=create_Accueil();
+gtk_widget_show (windowacc);
 }
 

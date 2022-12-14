@@ -1,0 +1,8 @@
+167 Baccar Fédi 27 7 2022 100008 CorruptionFinancière jvueineviik Moyen 
+231 Bellil Fatma 2 10 2022 100007 CorruptionFinancière adedefrf Faible 
+360 Msalmi Aymen 29 6 2022 100007 Conflitd'interet aabbcc Elevé 
+367 Hasni Fares 20 5 2022 100007 Aa Bb Elevé 
+777 Mejri Hichem 5 8 2022 100009 Ll Mm Elevé 
+444 Marzouki Firas 29 4 2022 100012 iyfyuf hiifygi Moyen 
+900 Njima Louay 3 4 2022 100010 iyfv hiuyv Elevé 
+901 Azizi Aziz 3 3 2022 100012 rferer erervf Elevé 

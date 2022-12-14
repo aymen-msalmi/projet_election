@@ -19,7 +19,7 @@ FILE *f;
 int i=0;
 gpointer user_data;
 bureau b;
-f=fopen(filename,"a");
+f=fopen(filename,"a+");
 if(f!=NULL)
 {	while(fscanf(f,"%s %d %d %s %s\n",b.idbureau,&b.capelec,&b.capobs,b.adr,b.idagentb)!=EOF)
 	{
@@ -37,7 +37,7 @@ if(f!=NULL)
 	}
 	}
 	if(i!=0){
-	pInfo=gtk_message_dialog_new(GTK_WINDOW(user_data),GTK_DIALOG_MODAL,GTK_MESSAGE_WARNING,GTK_BUTTONS_OK,"ID doit etre unique !");
+	pInfo=gtk_message_dialog_new(GTK_WINDOW(user_data),GTK_DIALOG_MODAL,GTK_MESSAGE_WARNING,GTK_BUTTONS_OK,"ID déja existe !");
 	switch(gtk_dialog_run(GTK_DIALOG(pInfo)))
 	{
 	case GTK_RESPONSE_OK:

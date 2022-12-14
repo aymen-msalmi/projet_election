@@ -32,6 +32,22 @@ typedef struct
     int votes;
     char Municipalite[50];
 }ListeElectoral;
+typedef struct
+{
+    char IdElection[30];
+    Date dateElection;
+    char TypeElection[50];
+
+} Election;
+typedef struct
+{
+    char nom[20];
+    char prenom[20];
+    int sexe ;
+    int  cin ;
+    Date date;
+    int typeutilisateur;
+} utilisateur;
 
 void recherche_rec(GtkWidget *liste, char idrec[]);
 int substring_rec(char str1[], char str2[]);
@@ -45,6 +61,17 @@ void modifier_rec(Reclamation a);
 void supprimer_rec(char idr [] );
 void chercher_rec(char idr[]);
 void affichagereclamationrechercher(GtkWidget *liste);
+
+int verifnum(char nbrverif[], int taille);
+void TPHF(char *votes , char *user,int *fe,int *h,float *th,float *tf);
+float TPE(char *votes ,char *user);
+void ajouter_elec(Election e);
+void affichageelection(GtkWidget *liste);
+void modifier_elec( Election e);
+void supprimer_elec(char IdElection[]);
+void chercher_elec(char IdElection[]);
+void affichageelectionrechercher(GtkWidget *liste);
+
 
 
 

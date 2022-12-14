@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "gesrec.h"
+#include "ges_elec.h"
 
 char Idbureau[50]="";
 
@@ -21,7 +22,6 @@ char Idbureau[50]="";
 
 
 /////////////////////////////////////////////LOGIN BUREAU DE VOTE //////////////////////////////////////////////////////
-
 
 void
 on_Connecter_gest_BV_clicked           (GtkButton       *button,
@@ -794,13 +794,6 @@ gtk_widget_show(Login_BV);
 }
 
 
-void
-on_admin_GE_clicked                    (GtkButton       *button,
-                                        gpointer         user_data)
-{
-
-}
-
 
 void
 on_admin_GU_clicked                    (GtkButton       *button,
@@ -1402,5 +1395,466 @@ windowlog=lookup_widget(button,"login_rec");
 gtk_widget_destroy(windowlog);
 windowacc=create_Accueil();
 gtk_widget_show (windowacc);
+}
+
+/*****************************************************************************
+*********************************Fatma*****************************************
+***************************Gestion_des_elections*******************************/
+ 
+
+/////////////////////////////////////////////LOGIN GESTION ELECTION//////////////////////////////////////////////////////
+int x_fatma;
+int y_fatma;
+int z_fatma;
+int affichage_init_fatma=0;
+int affichage_tree_fatma = 0;
+char IdElection[50]="";
+
+
+void
+on_admin_GE_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *Login_election;
+GtkWidget *Administrateur;
+
+Administrateur=lookup_widget(button,"Administrateur");
+gtk_widget_destroy(Administrateur);
+
+Login_election=lookup_widget(button,"Login_election");
+Login_election=create_Login_election();
+gtk_widget_show(Login_election);
+}
+
+void
+on_Connecter_gest_elec_clicked         (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *Login_election,*Gestion_des_elections;
+GtkWidget *user,*pass,*resultat; 
+char username[20]; 
+char password[20];
+char text9[50];
+user= lookup_widget(button,"Login_entry_identifiant_elec");
+pass = lookup_widget(button,"Login_entry_pass_elec");
+strcpy(username,gtk_entry_get_text(GTK_ENTRY(user)));
+strcpy(password,gtk_entry_get_text(GTK_ENTRY(pass))); 
+if ((strcmp(username,"elec")==0) && (strcmp (password,"elec")==0)) 
+{
+Login_election=lookup_widget(button,"Login_election");
+Gestion_des_elections = create_Gestion_des_elections (); 
+gtk_widget_show (Gestion_des_elections);
+gtk_widget_destroy(Login_election); }
+else {
+resultat=lookup_widget(button,"label_login_elec");
+strcpy(text9,"Utilisateur n'est pas trouvé");
+gtk_label_set_text(GTK_LABEL(resultat),text9);
+}
+}
+
+void
+on_retour_login_election_clicked       (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *Login_election;
+GtkWidget *Administrateur;
+
+Login_election=lookup_widget(button,"Login_election");
+gtk_widget_destroy(Login_election);
+
+Administrateur=lookup_widget(button,"Administrateur");
+Administrateur=create_Administrateur();
+gtk_widget_show(Administrateur);
+}
+
+//treeview
+void
+on_treeview2_row_activated             (GtkTreeView     *treeview,
+                                        GtkTreePath     *path,
+                                        GtkTreeViewColumn *column,
+                                        gpointer         user_data)
+{
+
+}
+//affichager 
+void
+on_afficher_gest_elec_clicked          (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *tree,*windowaffich;
+windowaffich=lookup_widget(button,"Gestion_des_elections");
+gtk_widget_destroy(windowaffich);
+windowaffich=create_Gestion_des_elections();
+tree=lookup_widget(windowaffich,"treeview2");
+
+affichageelection(tree);
+
+gtk_widget_hide(windowaffich);
+gtk_widget_show(windowaffich);
+}
+//Rechercher
+void
+on_Recherche_gest_elec_clicked         (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *treeview2;
+GtkWidget *input_f;
+char str[200];
+input_f=lookup_widget(button,"entry_recherche_gest_elec");
+strcpy(str,gtk_entry_get_text(GTK_ENTRY(input_f)));
+chercher_elec(str);
+
+treeview2=lookup_widget(button,"treeview2");
+affichageelectionrechercher(treeview2);
+}
+//Ajouter
+void
+on_Ajouter_gest_elec_clicked           (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout,*windowaff ;
+windowaff=lookup_widget(button,"Gestion_des_elections");
+gtk_widget_destroy(windowaff);
+windowajout=create_Ajout_gest_elec();
+gtk_widget_show (windowajout);
+}
+//Modifier
+void
+on_Modifier_gest_elec_clicked          (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowaffich,*windowaff;
+windowaff=lookup_widget(button,"Gestion_des_elections");
+gtk_widget_destroy(windowaff);
+windowaffich=create_Modifie_gest_elec();
+gtk_widget_show (windowaffich);
+}
+
+//Supprimer
+void
+on_Supprimer_gest_elec_clicked         (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowsup,*windowaff;
+windowaff=lookup_widget(button,"Gestion_des_elections");
+gtk_widget_destroy(windowaff);
+windowsup=create_supp_gest_elec();
+gtk_widget_show (windowsup);
+}
+//bouton Taux1
+void
+on_Taux_participation_electeur_clicked (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowinf ;
+windowinf=create_window_Taux1_electeur();
+gtk_widget_show (windowinf);
+}
+//bouton Taux2
+void
+on_Taux_participation_HF_clicked       (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowinf ;
+windowinf=create_window_Taux2_HF();
+gtk_widget_show (windowinf);
+}
+//le signal sur le window 
+gboolean
+on_Gestion_des_elections_focus_in_event
+                                        (GtkWidget       *widget,
+                                        GdkEventFocus   *event,
+                                        gpointer         user_data)
+{
+if (affichage_tree_fatma==0)
+{
+strcpy(IdElection,"");
+GtkWidget *tree;
+
+tree =  lookup_widget(widget,"treeview2");
+
+affichageelection(tree);
+}
+affichage_tree_fatma = 1;
+  return FALSE;
+}
+
+//quitter gestion des elections
+void
+on_quitter2_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowaff, *windowacc;
+windowaff=lookup_widget(button,"Gestion_des_elections");
+gtk_widget_destroy(windowaff);
+windowacc=create_Login_election();
+gtk_widget_show (windowacc);
+}
+////////////////////////AJOUT ELECTION////////////////////////
+void
+on_quitter3_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *windowacc;
+windowajout=lookup_widget(button,"Ajout_gest_elec");
+gtk_widget_destroy(windowajout);
+windowacc=create_Login_election();
+gtk_widget_show (windowacc);
+}
+
+
+void
+on_button_retour8_clicked              (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *Gestion_des_elections;
+GtkWidget *Ajout_gest_elec;
+
+Gestion_des_elections=create_Gestion_des_elections();
+gtk_widget_show(Gestion_des_elections);
+
+Ajout_gest_elec=lookup_widget(button,"Ajout_gest_elec");
+gtk_widget_destroy(Ajout_gest_elec);
+}
+
+
+void
+on_radiobutton_municipale_toggled      (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{x_fatma=1;}
+}
+
+void
+on_radiobutton_presidentielle_toggled  (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{x_fatma=2;}
+}
+
+void
+on_checkbutton1_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{y_fatma=1;}
+}
+void
+on_Enregistrer_ajout_elec_clicked      (GtkButton       *button,
+                                        gpointer         user_data)
+{
+if (y_fatma==1)
+{
+Election e;
+int errorIdElection;
+GtkWidget *windowajout,*output, *windowaffich,*IdElection,*jour,*mois,*annee,*TypeElection;
+windowajout=create_Ajout_gest_elec();
+windowaffich=create_Gestion_des_elections();
+IdElection = lookup_widget(button,"entry_id_ajout_elec");
+jour = lookup_widget(button,"jour_ajout_elec");
+mois = lookup_widget(button,"mois_ajout_elec");
+annee = lookup_widget(button,"Annee_ajout_elec");
+output=lookup_widget(button,"label_error_ajout_fatma");
+
+strcpy(e.IdElection,gtk_entry_get_text(GTK_ENTRY(IdElection)));
+e.dateElection.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (jour));
+e.dateElection.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (mois));
+e.dateElection.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (annee));
+if(x_fatma==1 )
+{strcpy(e.TypeElection,"Municipale");} 
+else 
+{strcpy(e.TypeElection,"Presidentielle");}
+errorIdElection =verifnum(e.IdElection, 3);
+if(errorIdElection==1)
+{
+gtk_label_set_text(GTK_LABEL(output),"Lidentifiant doit contenir trois chiffres");
+}
+else
+{
+ajouter_elec(e);
+x_fatma=0;
+gtk_label_set_text(GTK_LABEL(output),"Error_123");
+windowajout=lookup_widget(button,"Ajout_gest_elec");
+gtk_widget_destroy(windowajout);
+windowaffich=create_Gestion_des_elections();
+gtk_widget_show(windowaffich);
+}
+}
+y_fatma=0;
+}
+
+
+void
+on_Annuler_ajout_elec_clicked          (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout;
+windowajout=lookup_widget(button,"Ajout_gest_elec");
+gtk_widget_destroy(windowajout);
+}
+
+/////////////////////////MODIFIER Election///////////////
+void
+on_button_retour_14_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *Gestion_des_elections;
+GtkWidget *Modifie_gest_elec;
+
+Gestion_des_elections=create_Gestion_des_elections();
+gtk_widget_show(Gestion_des_elections);
+
+Modifie_gest_elec=lookup_widget(button,"Modifie_gest_elec");
+gtk_widget_destroy(Modifie_gest_elec);
+}
+
+
+void
+on_quitter9_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowajout, *windowacc;
+windowajout=lookup_widget(button,"Modifie_gest_elec");
+gtk_widget_destroy(windowajout);
+windowacc=create_Login_election();
+gtk_widget_show (windowacc);
+}
+
+
+void
+on_radiobutton_modifie_municipale_toggled
+                                        (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{z_fatma=1;}
+}
+
+
+void
+on_radiobutton_modifie_presidentielle_toggled
+                                        (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{z_fatma=2;}
+}
+
+
+void
+on_Enregistrer_modifie_elec_clicked    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+Election e1;
+GtkWidget *windowmodif, *windowaffich,*IdElection1,*jour1,*mois1,*annee1,*TypeElection1;
+windowmodif=create_Modifie_gest_elec();
+windowaffich=create_Gestion_des_elections();
+IdElection1=lookup_widget(button,"combobox_modifier_elec");
+jour1 = lookup_widget(button,"jour_modifie_elec");
+mois1 = lookup_widget(button,"mois_modifie_elec");
+annee1 = lookup_widget(button,"Annee_modifie_elec");
+strcpy(e1.IdElection,gtk_combo_box_get_active_text(GTK_COMBO_BOX(IdElection1)));
+e1.dateElection.jour=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (jour1));
+e1.dateElection.mois=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (mois1));
+e1.dateElection.annee=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON (annee1));
+if(z_fatma==1 )
+{strcpy(e1.TypeElection,"Municipale");} 
+else 
+{strcpy(e1.TypeElection,"Presidentielle");}
+modifier_elec(e1);
+z_fatma=0;
+windowmodif=lookup_widget(button,"Modifie_gest_elec");
+gtk_widget_destroy(windowmodif);
+windowaffich=create_Gestion_des_elections();
+gtk_widget_show (windowaffich);
+}
+
+
+void
+on_Annuler_modifie_elec_clicked        (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowmodif;
+windowmodif=lookup_widget(button,"Modifie_gest_elec");
+gtk_widget_destroy(windowmodif);
+}
+///////////////////SUPPRIMER ELECTION////////////////////////////
+
+void
+on_confirmer_supp_gest_elec_clicked    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+char identi[20];
+GtkWidget *windowsup, *windowaffich, *iden;
+iden = lookup_widget(button,"entry_supp_gest_elec");
+strcpy(identi,gtk_entry_get_text(GTK_ENTRY(iden)));
+supprimer_elec(identi);
+
+windowsup=lookup_widget(button,"Supprimer_gest_elec");
+gtk_widget_destroy(windowsup);
+windowaffich=create_Gestion_des_elections();
+gtk_widget_show(windowaffich);
+}
+
+void
+on_button_retour_supp_elec_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *Gestion_des_elections;
+GtkWidget *Supp_gest_elec;
+
+Gestion_des_elections=create_Gestion_des_elections();
+gtk_widget_show(Gestion_des_elections);
+
+Supp_gest_elec=lookup_widget(button,"Supp_gest_elec");
+gtk_widget_destroy(Supp_gest_elec);
+}
+
+///////////////////////WINDOW Taux1/////////////////////////
+void
+on_Taux1_electeur_clicked              (GtkButton       *button,
+                                        gpointer         user_data)
+{
+float x;
+char text[50];
+GtkWidget *output;
+x=TPE("votes.txt","user.txt");
+output=lookup_widget(button,"label_taux1");
+sprintf(text,"%f",x);
+gtk_label_set_text(GTK_LABEL(output),text);
+}
+
+
+void
+on_retour_Taux1_clicked                (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+}
+
+///////////////////WINDOW Taux2////////////////////////////
+void
+on_Taux2_HF_clicked                    (GtkButton       *button,
+                                        gpointer         user_data)
+{
+float th=0;
+float tf=0;
+int h;
+int fe;
+char text[50]="";
+GtkWidget *output;
+TPHF("votes.txt","user.txt",&fe,&h,&th,&tf);
+sprintf(text,"taux de femme=%f taux de homme=%f",tf,th);
+output=lookup_widget(button,"label_Taux2");
+gtk_label_set_text(GTK_LABEL(output),text);
+}
+
+void
+on_retour_Taux2_HF_clicked             (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
 }
 

@@ -101,7 +101,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_projet2_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
 	interface.$(OBJEXT) callbacks.$(OBJEXT) BureauVote.$(OBJEXT) \
-	gesrec.$(OBJEXT)
+	gesrec.$(OBJEXT) ges_elec.$(OBJEXT)
 projet2_OBJECTS = $(am_projet2_OBJECTS)
 am__DEPENDENCIES_1 =
 projet2_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -284,7 +284,8 @@ projet2_SOURCES = \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
 	BureauVote.c BureauVote.h \
-	gesrec.c gesrec.h
+	gesrec.c gesrec.h \
+	ges_elec.c ges_elec.h
 
 projet2_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 all: all-am
@@ -375,6 +376,7 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/BureauVote.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/callbacks.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ges_elec.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/gesrec.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/interface.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@

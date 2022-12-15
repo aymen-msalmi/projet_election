@@ -48,3 +48,4 @@ void affichagereclamationrechercher(GtkWidget *liste);
 
 
 
+/*****************added by aymen*/

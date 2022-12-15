@@ -3,6 +3,11 @@
 #include <string.h>
 #include<gtk/gtk.h>
 
+
+
+
+
+
 typedef struct 
 {
 char idbureau[20];

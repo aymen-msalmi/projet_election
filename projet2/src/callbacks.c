@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "gesrec.h"
+#include "crudCandidat.h"
 
 char Idbureau[50]="";
 
@@ -738,12 +739,7 @@ on_button__clicked                     (GtkButton       *button,
 
 
 
-void
-on_Accueil_EC_clicked                  (GtkButton       *button,
-                                        gpointer         user_data)
-{
 
-}
 
 
 void
@@ -758,7 +754,15 @@ void
 on_Accueil_EE_clicked                  (GtkButton       *button,
                                         gpointer         user_data)
 {
+   GtkWidget *windowprincipale;
+   GtkWidget *windowVote;
+    
+   windowprincipale = lookup_widget(button,"windowprincipale");
+   gtk_widget_destroy(windowprincipale);
 
+   windowVote=lookup_widget(button,"windowVote");
+   windowVote=create_windowVote();
+   gtk_widget_show(windowVote);
 }
 
 
@@ -1402,5 +1406,543 @@ windowlog=lookup_widget(button,"login_rec");
 gtk_widget_destroy(windowlog);
 windowacc=create_Accueil();
 gtk_widget_show (windowacc);
+}
+
+/************** added by aymen*/
+int y_aymen,x_aymen;
+int affichage_init_aymen=0;
+int affichage_tree_aymen = 0;
+char Idlisteelec[50]="";
+/*            windo login*/
+void
+on_Accueil_EC_clicked                  (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowConnectCandidat , *Accueil;
+    windowConnectCandidat = create_windowConnectCandidat ();
+    gtk_widget_show (windowConnectCandidat);
+
+    Accueil=lookup_widget(button,"Accueil");
+    gtk_widget_destroy(Accueil);
+}
+void
+on_buttonEspaceCandidat_clicked        (GtkButton       *button,
+                                        gpointer         user_data)
+{
+  GtkWidget *windowCandidat ,*windowConnectCandidat; 
+ GtkWidget *user,*pass,*resultat; 
+char username[20]; 
+char password[20];
+char text9[50];
+user= lookup_widget(button,"entryaymenid");
+pass = lookup_widget(button,"entryaymenmdp");
+strcpy(username,gtk_entry_get_text(GTK_ENTRY(user)));
+strcpy(password,gtk_entry_get_text(GTK_ENTRY(pass))); 
+if ((strcmp(username,"aymen")==0) && (strcmp (password,"03776387")==0)) 
+{
+   windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowConnectCandidat=lookup_widget(button,"windowConnectCandidat");
+    gtk_widget_destroy(windowConnectCandidat);
+}
+else {
+resultat=lookup_widget(button,"labelerrorcandiat");
+strcpy(text9,"mot de passe ou id incorrect");
+gtk_label_set_text(GTK_LABEL(resultat),text9);
+}
+
+
+ 
+   
+}
+
+
+
+/*         window Candidat */
+
+void
+on_buttonQuitter_clicked               (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *windowCandidat ,*windowConnectCandidat;  
+    windowConnectCandidat  = create_windowConnectCandidat ();
+    gtk_widget_show (windowConnectCandidat );
+
+    windowCandidat=lookup_widget(button,"windowCandidat");
+    gtk_widget_destroy(windowCandidat);
+}
+void
+on_buttonAfiicheListe_clicked          (GtkButton       *button,
+                                        gpointer         user_data)
+{
+  GtkWidget *treeviewCandidat;
+GtkWidget *windowCandidat;
+windowCandidat=lookup_widget(button,"windowCandidat");
+gtk_widget_destroy(windowCandidat);
+//windowCandidat=lookup_widget(objet,"windowCandidat");
+windowCandidat=create_windowCandidat();
+//gtk_widget_show(windowCandidat);
+treeviewCandidat=lookup_widget(windowCandidat,"treeviewCandidat");
+afficheliste(treeviewCandidat);
+gtk_widget_hide(windowCandidat);
+gtk_widget_show(windowCandidat);
+
+}
+gboolean
+on_windowCandidat_focus_in_event       (GtkWidget       *widget,
+                                        GdkEventFocus   *event,
+                                        gpointer         user_data)
+{
+if (affichage_tree_aymen==0)
+{
+strcpy(Idlisteelec,"");
+GtkWidget *tree;
+
+tree =  lookup_widget(widget,"treeviewCandidat");
+
+afficheliste(tree);
+}
+
+affichage_tree_aymen= 1;
+  return FALSE;;
+}
+
+
+void
+on_entryRechercher_changed             (GtkEditable     *editable,
+                                        gpointer         user_data)
+{
+ GtkWidget *entryRecherche=lookup_widget(GTK_WIDGET(editable),"entryRechercher");
+ char idchercheliste[30]="";
+ char ficherliste[20]="listeElectorale.txt";
+
+ GtkWidget *tree;
+ tree = lookup_widget(editable,"treeviewCandidat");
+ strcpy(idchercheliste,gtk_entry_get_text(entryRecherche));
+
+ rechercheliste(tree,idchercheliste);
+}
+
+
+void
+on_treeviewCandidat_row_activated      (GtkTreeView     *treeview,
+                                        GtkTreePath     *path,
+                                        GtkTreeViewColumn *column,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_buttonAjoutCandidat_clicked         (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *windowAjoutCandidat, *windowCandidat ;  
+    windowAjoutCandidat  = create_windowAjouterCandidat ();
+    gtk_widget_show (windowAjoutCandidat );
+
+    windowCandidat=lookup_widget(button,"windowCandidat");
+    gtk_widget_destroy(windowCandidat);
+}
+
+
+void
+on_buttonModifierCandidat_clicked      (GtkButton       *button,
+                                        gpointer         user_data)
+{
+   GtkWidget *windowmofiderliste,*windowCandidat ;  
+    windowmofiderliste  =create_windowmodif();
+    gtk_widget_show (windowmofiderliste );
+
+    windowCandidat=lookup_widget(button,"windowCandidat");
+    gtk_widget_destroy(windowCandidat);
+}
+
+
+
+
+
+void
+on_buttonSupprimerCandidat_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *windowSupprimerCandidat ,*windowCandidat;  
+    windowSupprimerCandidat  = create_windowSupprimerCandiat ();
+    gtk_widget_show (windowSupprimerCandidat );
+
+    windowCandidat=lookup_widget(button,"windowCandidat");
+    gtk_widget_destroy(windowCandidat);
+}
+
+
+/*****************************here*************/
+
+
+
+
+void
+on_buttonEnregistrerCandidat_clicked   (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    if(y_aymen==1)
+   {
+
+    
+    GtkWidget *entryidListe=lookup_widget(GTK_WIDGET(button), "entryidListeAjouterCandidat");
+    GtkWidget *entryidCandiat=lookup_widget(GTK_WIDGET(button), "entryIdCandidatAjouter");
+    GtkWidget *labelerrorliste=lookup_widget(GTK_WIDGET(button), "labelerrorIdLListeAjoutCandidat");
+    GtkWidget *labelerrorCandiddat=lookup_widget(GTK_WIDGET(button), "labelerrorIdLCandidatAjoutCandidat");
+
+    GtkWidget *ordre=lookup_widget(button,"spinbuttonOrdreCandidat");
+    int ordreCandidat=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ordre));
+
+    gchar chidliste[50]="";
+    gchar chidCancidat[50]="";
+
+
+    strcat( chidliste ,gtk_entry_get_text(GTK_ENTRY(entryidListe)));
+    strcat( chidCancidat ,gtk_entry_get_text(GTK_ENTRY(entryidCandiat)));
+
+
+
+
+
+    int idListe=atoi(chidliste);
+    int idCandidat=atoi(chidCancidat);
+    int errorIdListe =verificationnumero(chidliste, 6);
+    int errorIdCandidat =verificationnumero(chidCancidat, 8);
+
+    if(errorIdListe!=0 )
+    {
+        gchar error[50]="error";
+        gtk_label_set_text(GTK_LABEL(labelerrorliste),error);
+    }
+    else if( errorIdCandidat!=0)
+    { 
+        
+        gchar error[50]="error";
+        gtk_label_set_text(GTK_LABEL(labelerrorCandiddat),error);
+
+    }
+    else 
+    {
+        int z= ajoutCandidat("listeElectorale.txt",idListe,ordreCandidat,idCandidat);
+        gchar error[50]="";
+        gtk_label_set_text(GTK_LABEL(labelerrorCandiddat),error);
+        gtk_label_set_text(GTK_LABEL(labelerrorliste),error);
+    }
+    GtkWidget *windowCandidat ,*windowAjouterCandidat;  
+    windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowAjouterCandidat=lookup_widget(button,"windowAjouterCandidat");
+    gtk_widget_destroy(windowAjouterCandidat);
+    }
+    
+    y_aymen=0;
+
+}
+
+
+void
+on_buttonRetourAjout_clicked           (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *windowCandidat ,*windowAjouterCandidat;  
+    windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowAjouterCandidat=lookup_widget(button,"windowAjouterCandidat");
+    gtk_widget_destroy(windowAjouterCandidat);
+}
+
+void
+on_buttonAnnulerEnregistrerCandidat_clicked
+                                        (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *windowCandidat ,*windowAjouterCandidat;  
+    windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowAjouterCandidat=lookup_widget(button,"windowAjouterCandidat");
+    gtk_widget_destroy(windowAjouterCandidat);
+}
+
+
+void
+on_buttonQuitterAjout_clicked          (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *windowCandidat ,*windowConnectCandidat;  
+    windowConnectCandidat  = create_windowConnectCandidat ();
+    gtk_widget_show (windowConnectCandidat );
+
+    windowCandidat=lookup_widget(button,"windowCandidat");
+    gtk_widget_destroy(windowCandidat);
+}
+
+
+
+
+
+
+void
+on_buttonAnnulerSupprimer_clicked      (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *windowCandidat ;  
+    GtkWidget *windowSupprimerCandiat;  
+   
+    windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowSupprimerCandiat=lookup_widget(button,"windowSupprimerCandiat");
+    gtk_widget_destroy(windowSupprimerCandiat);
+}
+
+
+void
+on_buttonSupprimer_clicked             (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    if(x_aymen==1)
+    {
+
+    
+GtkWidget *entryidListesupp=lookup_widget(GTK_WIDGET(button), "entryidListeSupprimerCandidat");
+    //GtkWidget *entryidCandiatsupp=lookup_widget(GTK_WIDGET(button), "entryidCandidatSupprimerCandidat");
+    //GtkWidget *labelerrorlistesupp=lookup_widget(GTK_WIDGET(button), "labelerrorIdLListeSupprimeCandidat");
+   // GtkWidget *labelerrorCandiddatsupp=lookup_widget(GTK_WIDGET(button), "labelerrorIdCandidatSupprimeCandidat");
+
+    GtkWidget *ordresupp=lookup_widget(button,"spinbuttonordreCandidatSupprimer");
+    int ordreCandidatsupp=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ordresupp));
+   
+
+
+    gchar chidlistesupp[50]="";
+   // gchar chidCancidatsupp[50]="";
+
+
+    strcpy( chidlistesupp ,gtk_entry_get_text(GTK_ENTRY(entryidListesupp)));
+    //strcat( chidCancidatsupp ,gtk_entry_get_text(GTK_ENTRY(entryidCandiatsupp)));
+
+    int idListe=atoi(chidlistesupp);
+   // int idCandidat=atoi(chidCancidatsupp);
+    int errorIdListe =verificationnumero(chidlistesupp, 6);
+   // int errorIdCandidat =verificationnumero(chidCancidatsupp, 8);
+
+    if(errorIdListe!=0 )
+    {
+        gchar error[50]="error";
+        //gtk_label_set_text(GTK_LABEL(labelerrorlistesupp),error);
+    }
+    //else if( errorIdCandidat!=0)
+  //  { 
+        
+   //     gchar error[50]="error";
+    //    gtk_label_set_text(GTK_LABEL(labelerrorCandiddatsupp),error);
+
+   // }
+    else 
+    {
+        int z= ajoutCandidat("listeElectorale.txt",idListe,ordreCandidatsupp,0);
+         gchar error[50]="";
+        //gtk_label_set_text(GTK_LABEL(labelerrorCandiddatsupp),error);
+       // gtk_label_set_text(GTK_LABEL(labelerrorlistesupp),error);
+    }
+    GtkWidget *windowCandidat ;  
+    GtkWidget *windowSupprimerCandiat;  
+   
+    windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowSupprimerCandiat=lookup_widget(button,"windowSupprimerCandiat");
+    gtk_widget_destroy(windowSupprimerCandiat);
+    }
+    x_aymen=0;
+
+
+}
+
+
+void
+on_buttonAnnulerModifer_clicked        (GtkButton       *button,
+                                        gpointer         user_data)
+{
+  GtkWidget *windowCandidat ;  
+    GtkWidget *windowmofiderliste;  
+    windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowmofiderliste=lookup_widget(button,"windowmofiderliste");
+    gtk_widget_destroy(windowmofiderliste);
+
+}
+
+
+void
+on_buttonEnergisterModfier_clicked     (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *entryidListe=lookup_widget(GTK_WIDGET(button), "entryidListeModiferCandidat");
+    GtkWidget *entryidCandiat=lookup_widget(GTK_WIDGET(button), "entryIdCandidatModfier");
+    GtkWidget *labelerrorliste=lookup_widget(GTK_WIDGET(button), "labelerrorIdLListeAjoutCandidat");
+    GtkWidget *labelerrorCandiddat=lookup_widget(GTK_WIDGET(button), "labelerrorIdLCandidatAjoutCandidat");
+
+    GtkWidget *ordre=lookup_widget(button,"spinbutton2");
+    int ordreCandidat=gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (ordre));
+
+    gchar chidliste[50]="";
+    gchar chidCancidat[50]="";
+
+
+    strcat( chidliste ,gtk_entry_get_text(GTK_ENTRY(entryidListe)));
+    strcat( chidCancidat ,gtk_entry_get_text(GTK_ENTRY(entryidCandiat)));
+
+
+
+
+
+    int idListe=atoi(chidliste);
+    int idCandidat=atoi(chidCancidat);
+    int errorIdListe =verificationnumero(chidliste, 6);
+    int errorIdCandidat =verificationnumero(chidCancidat, 8);
+
+    if(errorIdListe!=0 )
+    {
+        gchar error[50]="error";
+        gtk_label_set_text(GTK_LABEL(labelerrorliste),error);
+    }
+    else if( errorIdCandidat!=0)
+    { 
+        
+        gchar error[50]="error";
+        gtk_label_set_text(GTK_LABEL(labelerrorCandiddat),error);
+
+    }
+    else 
+    {
+        int z= ajoutCandidat("listeElectorale.txt",idListe,ordreCandidat,idCandidat);
+        gchar error[50]="";
+        gtk_label_set_text(GTK_LABEL(labelerrorCandiddat),error);
+        gtk_label_set_text(GTK_LABEL(labelerrorliste),error);
+    }
+}
+
+
+void
+on_buttonQuitterMod_clicked            (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *windowCandidat ,*windowConnectCandidat;  
+    windowConnectCandidat  = create_windowConnectCandidat ();
+    gtk_widget_show (windowConnectCandidat );
+
+    windowCandidat=lookup_widget(button,"windowCandidat");
+    gtk_widget_destroy(windowCandidat);
+
+}
+
+
+void
+on_buttonRetourMod_clicked             (GtkButton       *button,
+                                        gpointer         user_data)
+{
+
+    
+
+    GtkWidget *windowCandidat ;  
+    GtkWidget *windowmofiderliste;  
+    windowCandidat  = create_windowCandidat ();
+    gtk_widget_show (windowCandidat );
+
+    windowmofiderliste=lookup_widget(button,"windowmofiderliste");
+    gtk_widget_destroy(windowmofiderliste);
+}
+
+
+void
+on_buttonVoter_clicked                 (GtkButton       *button,
+                                        gpointer         user_data)
+{
+    GtkWidget *entryidliste=lookup_widget(GTK_WIDGET(button), "entryvoteid");
+    GtkWidget *entryidbureau=lookup_widget(GTK_WIDGET(button), "entryvote");
+    GtkWidget *labelerror=lookup_widget(GTK_WIDGET(button), "labelerrorvote");
+
+    gchar chidliste[50]="";
+    gchar chidbureu[50]="";
+
+
+    strcat( chidliste ,gtk_entry_get_text(GTK_ENTRY(entryidliste)));
+    strcat( chidbureu ,gtk_entry_get_text(GTK_ENTRY(entryidbureau)));
+
+
+
+
+
+    int idListe=atoi(chidliste);
+    int idBureau=atoi(chidbureu);
+    int errorIdListe =verificationnumero(chidliste, 6);
+    int errorIdBureau =verificationnumero(chidbureu, 3);
+
+    if(errorIdBureau==0 && errorIdListe==0)
+    { 
+        ajoutervotes("votes.txt", idBureau,  idListe);
+        gchar error[50]="";
+        gtk_label_set_text(GTK_LABEL(labelerror),error);
+
+    }
+    else
+    {
+        gchar error[50]="error";
+        gtk_label_set_text(GTK_LABEL(labelerror),error);
+
+    }
+}
+
+
+void
+on_buttonQuitvote_clicked              (GtkButton       *button,
+                                        gpointer         user_data)
+{
+GtkWidget *Accueil;
+GtkWidget *windowVote;
+
+windowVote=lookup_widget(button,"windowVote");
+gtk_widget_destroy(windowVote);
+
+Accueil=lookup_widget(button,"Accueil");
+Accueil=create_Accueil();
+gtk_widget_show(Accueil);
+}
+
+
+void
+on_checkbuttonVerfierAjouter_toggled   (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+  if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{y_aymen=1;}
+}
+
+
+void
+on_suppoui_toggled                     (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{x_aymen=1;}
+}
+
+
+void
+on_suppnon_toggled                     (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+if(gtk_toggle_button_get_active(GTK_RADIO_BUTTON (togglebutton)))
+{x_aymen=2;}
 }
 

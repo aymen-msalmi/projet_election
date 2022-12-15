@@ -13,7 +13,8 @@ projet2_SOURCES = \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
 	BureauVote.c BureauVote.h \
-	gesrec.c gesrec.h
+	gesrec.c gesrec.h \
+	crudCandidat.c crudCandidat.h
 
 projet2_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 

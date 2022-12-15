@@ -369,15 +369,29 @@ on_retour_login_rec_clicked            (GtkButton       *button,
                                         gpointer         user_data);
 
 void
+<<<<<<< HEAD
 on_buttonEspaceCandidat_clicked        (GtkButton       *button,
                                         gpointer         user_data);
 
 gboolean
 on_windowCandidat_focus_in_event       (GtkWidget       *widget,
+=======
+on_retour_login_election_clicked       (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Connecter_gest_elec_clicked         (GtkButton       *button,
+                                        gpointer         user_data);
+
+gboolean
+on_Gestion_des_elections_focus_in_event
+                                        (GtkWidget       *widget,
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
                                         GdkEventFocus   *event,
                                         gpointer         user_data);
 
 void
+<<<<<<< HEAD
 on_entryRechercher_changed             (GtkEditable     *editable,
                                         gpointer         user_data);
 
@@ -479,4 +493,151 @@ on_suppoui_toggled                     (GtkToggleButton *togglebutton,
 
 void
 on_suppnon_toggled                     (GtkToggleButton *togglebutton,
+=======
+on_treeview2_row_activated             (GtkTreeView     *treeview,
+                                        GtkTreePath     *path,
+                                        GtkTreeViewColumn *column,
+                                        gpointer         user_data);
+
+void
+on_Recherche_gest_elec_clicked         (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Taux_participation_electeur_clicked (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Taux_participation_HF_clicked       (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Modifier_gest_elec_clicked          (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Ajouter_gest_elec_clicked           (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_afficher_gest_elec_clicked          (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_quitter2_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Supprimer_gest_elec_clicked         (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_retour8_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_quitter3_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_radiobutton_municipale_toggled      (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_radiobutton_presidentielle_toggled  (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_checkbutton1_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_Enregistrer_ajout_elec_clicked      (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Annuler_ajout_elec_clicked          (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_quitter3_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_retour8_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_radiobutton_municipale_toggled      (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_radiobutton_presidentielle_toggled  (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_checkbutton1_toggled                (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_Enregistrer_ajout_elec_clicked      (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Annuler_ajout_elec_clicked          (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_retour_14_clicked            (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_quitter9_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_radiobutton_modifie_municipale_toggled
+                                        (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_radiobutton_modifie_presidentielle_toggled
+                                        (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_Enregistrer_modifie_elec_clicked    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Annuler_modifie_elec_clicked        (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_retour_supp_clicked          (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_confirmer_supp_gest_elec_clicked    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_button_retour_supp_elec_clicked     (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Taux1_electeur_clicked              (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_retour_Taux1_clicked                (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_Taux2_HF_clicked                    (GtkButton       *button,
+                                        gpointer         user_data);
+
+void
+on_retour_Taux2_HF_clicked             (GtkButton       *button,
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
                                         gpointer         user_data);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
 <!DOCTYPE glade-interface SYSTEM "http://glade.gnome.org/glade-2.0.dtd">
 
@@ -10177,3 +10178,5 @@ par Liste Electorales</property>
 </widget>
 
 </glade-interface>
+=======
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0

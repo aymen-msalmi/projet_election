@@ -16,9 +16,18 @@ GtkWidget* create_Supprimer_ges_rec (void);
 GtkWidget* create_fct1_fedi (void);
 GtkWidget* create_fct2_fedi (void);
 GtkWidget* create_login_rec (void);
+<<<<<<< HEAD
 GtkWidget* create_windowConnectCandidat (void);
 GtkWidget* create_windowCandidat (void);
 GtkWidget* create_windowAjouterCandidat (void);
 GtkWidget* create_windowSupprimerCandiat (void);
 GtkWidget* create_windowmodif (void);
 GtkWidget* create_windowVote (void);
+=======
+GtkWidget* create_Login_election (void);
+GtkWidget* create_Gestion_des_elections (void);
+GtkWidget* create_Ajout_gest_elec (void);
+GtkWidget* create_Modifie_gest_elec (void);
+GtkWidget* create_supp_gest_elec (void);
+GtkWidget* create_window_Taux1_electeur (void);
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0

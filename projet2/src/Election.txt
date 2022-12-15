@@ -1,0 +1,7 @@
+111 3 3 2024 Presidentielle
+999 1 1 2022 Presidentielle
+000 3 3 2024 Municipale
+888 2 1 2022 Municipale
+666 1 4 2022 Municipale
+222 1 1 2022 Presidentielle
+456 1 1 2022 Municipale

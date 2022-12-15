@@ -2889,20 +2889,17 @@ Matmata</property>
       </child>
 
       <child>
-	<widget class="GtkButton" id="Accueil_EO">
+	<widget class="GtkButton" id="Accueil_EE">
 	  <property name="width_request">384</property>
 	  <property name="height_request">53</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-	  <accessibility>
-	    <atkproperty name="AtkObject::accessible_name" translatable="yes">  Espace Observateur</atkproperty>
-	  </accessibility>
-	  <signal name="clicked" handler="on_Accueil_EO_clicked" last_modification_time="Wed, 14 Dec 2022 00:02:37 GMT"/>
+	  <signal name="clicked" handler="on_Accueil_EE_clicked" last_modification_time="Wed, 14 Dec 2022 00:01:27 GMT"/>
 
 	  <child>
-	    <widget class="GtkAlignment" id="alignment165">
+	    <widget class="GtkAlignment" id="alignment162">
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -2914,13 +2911,13 @@ Matmata</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-		<widget class="GtkHBox" id="hbox157">
+		<widget class="GtkHBox" id="hbox154">
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-		    <widget class="GtkImage" id="image176">
+		    <widget class="GtkImage" id="image173">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-justify-center</property>
 		      <property name="icon_size">4</property>
@@ -2937,9 +2934,9 @@ Matmata</property>
 		  </child>
 
 		  <child>
-		    <widget class="GtkLabel" id="label386">
+		    <widget class="GtkLabel" id="label383">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">   &lt;b&gt;&lt;span color=&quot;red&quot;&gt;Espace Observateur&lt;/span&gt;&lt;/b&gt; </property>
+		      <property name="label" translatable="yes">  &lt;b&gt;&lt;span color=&quot;red&quot;&gt;Espace Electeur&lt;/span&gt;&lt;/b&gt;    </property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">True</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -2953,9 +2950,6 @@ Matmata</property>
 		      <property name="width_chars">-1</property>
 		      <property name="single_line_mode">False</property>
 		      <property name="angle">0</property>
-		      <accessibility>
-			<atkproperty name="AtkObject::accessible_name" translatable="yes"> Espace Observateur</atkproperty>
-		      </accessibility>
 		    </widget>
 		    <packing>
 		      <property name="padding">0</property>
@@ -2970,7 +2964,7 @@ Matmata</property>
 	</widget>
 	<packing>
 	  <property name="x">224</property>
-	  <property name="y">376</property>
+	  <property name="y">144</property>
 	</packing>
       </child>
 
@@ -3058,17 +3052,20 @@ Matmata</property>
       </child>
 
       <child>
-	<widget class="GtkButton" id="Accueil_EE">
+	<widget class="GtkButton" id="Accueil_EO">
 	  <property name="width_request">384</property>
 	  <property name="height_request">53</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-	  <signal name="clicked" handler="on_Accueil_EE_clicked" last_modification_time="Wed, 14 Dec 2022 00:01:27 GMT"/>
+	  <accessibility>
+	    <atkproperty name="AtkObject::accessible_name" translatable="yes">  Espace Observateur</atkproperty>
+	  </accessibility>
+	  <signal name="clicked" handler="on_Accueil_EO_clicked" last_modification_time="Wed, 14 Dec 2022 00:02:37 GMT"/>
 
 	  <child>
-	    <widget class="GtkAlignment" id="alignment162">
+	    <widget class="GtkAlignment" id="alignment165">
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -3080,13 +3077,13 @@ Matmata</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-		<widget class="GtkHBox" id="hbox154">
+		<widget class="GtkHBox" id="hbox157">
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-		    <widget class="GtkImage" id="image173">
+		    <widget class="GtkImage" id="image176">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-justify-center</property>
 		      <property name="icon_size">4</property>
@@ -3103,9 +3100,9 @@ Matmata</property>
 		  </child>
 
 		  <child>
-		    <widget class="GtkLabel" id="label383">
+		    <widget class="GtkLabel" id="label386">
 		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;b&gt;&lt;span color=&quot;red&quot;&gt;Espace Electeur&lt;/span&gt;&lt;/b&gt;    </property>
+		      <property name="label" translatable="yes">   &lt;b&gt;&lt;span color=&quot;red&quot;&gt;Espace Observateur&lt;/span&gt;&lt;/b&gt; </property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">True</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -3119,6 +3116,9 @@ Matmata</property>
 		      <property name="width_chars">-1</property>
 		      <property name="single_line_mode">False</property>
 		      <property name="angle">0</property>
+		      <accessibility>
+			<atkproperty name="AtkObject::accessible_name" translatable="yes"> Espace Observateur</atkproperty>
+		      </accessibility>
 		    </widget>
 		    <packing>
 		      <property name="padding">0</property>
@@ -3133,7 +3133,7 @@ Matmata</property>
 	</widget>
 	<packing>
 	  <property name="x">224</property>
-	  <property name="y">144</property>
+	  <property name="y">376</property>
 	</packing>
       </child>
     </widget>
@@ -7331,19 +7331,11 @@ par Liste Electorales</property>
   </child>
 </widget>
 
-<<<<<<< HEAD
-<widget class="GtkWindow" id="windowConnectCandidat">
-  <property name="width_request">800</property>
-  <property name="height_request">544</property>
-  <property name="visible">True</property>
-  <property name="title" translatable="yes">Login</property>
-=======
 <widget class="GtkWindow" id="Login_election">
   <property name="width_request">800</property>
   <property name="height_request">544</property>
   <property name="visible">True</property>
   <property name="title" translatable="yes">Login_election</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
   <property name="modal">False</property>
@@ -7362,11 +7354,7 @@ par Liste Electorales</property>
       <property name="visible">True</property>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkEntry" id="entryaymenid">
-=======
 	<widget class="GtkEntry" id="Login_entry_identifiant_elec">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">168</property>
 	  <property name="height_request">35</property>
 	  <property name="visible">True</property>
@@ -7386,11 +7374,7 @@ par Liste Electorales</property>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkEntry" id="entryaymenmdp">
-=======
 	<widget class="GtkEntry" id="Login_entry_pass_elec">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">168</property>
 	  <property name="height_request">35</property>
 	  <property name="visible">True</property>
@@ -7488,9 +7472,6 @@ par Liste Electorales</property>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="button10">
-=======
 	<widget class="GtkLabel" id="label455">
 	  <property name="width_request">272</property>
 	  <property name="height_request">49</property>
@@ -7544,18 +7525,13 @@ par Liste Electorales</property>
 
       <child>
 	<widget class="GtkButton" id="retour_login_election">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">104</property>
 	  <property name="height_request">37</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_retour_login_rec_clicked" last_modification_time="Wed, 14 Dec 2022 12:39:29 GMT"/>
-=======
 	  <signal name="clicked" handler="on_retour_login_election_clicked" last_modification_time="Wed, 14 Dec 2022 14:02:17 GMT"/>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment197">
@@ -7593,11 +7569,7 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label455">
-=======
 		    <widget class="GtkLabel" id="label456">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">  Retour</property>
 		      <property name="use_underline">True</property>
@@ -7632,48 +7604,14 @@ par Liste Electorales</property>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label454">
-	  <property name="width_request">272</property>
-	  <property name="height_request">49</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Gestion des Listes Electorale&lt;/span&gt;&lt;/b&gt;</property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">264</property>
-	  <property name="y">0</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkButton" id="buttonEspaceCandidat">
-=======
 	<widget class="GtkButton" id="Connecter_gest_elec">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">152</property>
 	  <property name="height_request">45</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonEspaceCandidat_clicked" last_modification_time="Wed, 14 Dec 2022 20:33:20 GMT"/>
-=======
 	  <signal name="clicked" handler="on_Connecter_gest_elec_clicked" last_modification_time="Wed, 14 Dec 2022 14:03:30 GMT"/>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment196">
@@ -7744,52 +7682,15 @@ par Liste Electorales</property>
 	  <property name="y">360</property>
 	</packing>
       </child>
-<<<<<<< HEAD
-
-      <child>
-	<widget class="GtkLabel" id="labelerrorcandiat">
-	  <property name="width_request">272</property>
-	  <property name="height_request">41</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">280</property>
-	  <property name="y">296</property>
-	</packing>
-      </child>
-=======
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
     </widget>
   </child>
 </widget>
 
-<<<<<<< HEAD
-<widget class="GtkWindow" id="windowCandidat">
-  <property name="width_request">800</property>
-  <property name="height_request">544</property>
-  <property name="visible">True</property>
-  <property name="title" translatable="yes">Gestion _liste_electorale</property>
-=======
 <widget class="GtkWindow" id="Gestion_des_elections">
   <property name="width_request">800</property>
   <property name="height_request">544</property>
   <property name="visible">True</property>
   <property name="title" translatable="yes">Gestion_des_elections</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
   <property name="modal">False</property>
@@ -7802,43 +7703,6 @@ par Liste Electorales</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
   <property name="focus_on_map">True</property>
   <property name="urgency_hint">False</property>
-<<<<<<< HEAD
-  <signal name="focus_in_event" handler="on_windowCandidat_focus_in_event" last_modification_time="Wed, 14 Dec 2022 21:52:07 GMT"/>
-
-  <child>
-    <widget class="GtkFixed" id="fixed43">
-      <property name="visible">True</property>
-
-      <child>
-	<widget class="GtkEntry" id="entryRechercher">
-	  <property name="width_request">160</property>
-	  <property name="height_request">27</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">0</property>
-	  <property name="text" translatable="yes" comments="Rechercher ..."></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
-	  <signal name="changed" handler="on_entryRechercher_changed" last_modification_time="Wed, 14 Dec 2022 20:43:47 GMT"/>
-	</widget>
-	<packing>
-	  <property name="x">256</property>
-	  <property name="y">96</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkTreeView" id="treeviewCandidat">
-	  <property name="width_request">584</property>
-	  <property name="height_request">280</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="headers_visible">True</property>
-	  <property name="rules_hint">True</property>
-=======
   <signal name="focus_in_event" handler="on_Gestion_des_elections_focus_in_event" last_modification_time="Wed, 14 Dec 2022 14:41:27 GMT"/>
 
   <child>
@@ -7853,17 +7717,12 @@ par Liste Electorales</property>
 	  <property name="can_focus">True</property>
 	  <property name="headers_visible">True</property>
 	  <property name="rules_hint">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="reorderable">False</property>
 	  <property name="enable_search">True</property>
 	  <property name="fixed_height_mode">False</property>
 	  <property name="hover_selection">False</property>
 	  <property name="hover_expand">False</property>
-<<<<<<< HEAD
-	  <signal name="row_activated" handler="on_treeviewCandidat_row_activated" last_modification_time="Wed, 14 Dec 2022 20:45:21 GMT"/>
-=======
 	  <signal name="row_activated" handler="on_treeview2_row_activated" last_modification_time="Wed, 14 Dec 2022 14:40:56 GMT"/>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</widget>
 	<packing>
 	  <property name="x">40</property>
@@ -7872,11 +7731,6 @@ par Liste Electorales</property>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="button19">
-	  <property name="width_request">144</property>
-	  <property name="height_request">40</property>
-=======
 	<widget class="GtkLabel" id="label464">
 	  <property name="width_request">170</property>
 	  <property name="height_request">33</property>
@@ -7906,17 +7760,10 @@ par Liste Electorales</property>
 	<widget class="GtkButton" id="Recherche_gest_elec">
 	  <property name="width_request">40</property>
 	  <property name="height_request">32</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_Rechercher_gest_BV_clicked" last_modification_time="Wed, 07 Dec 2022 15:01:52 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment206">
-=======
 	  <signal name="clicked" handler="on_Recherche_gest_elec_clicked" last_modification_time="Wed, 14 Dec 2022 14:38:42 GMT"/>
 
 	  <child>
@@ -7949,7 +7796,6 @@ par Liste Electorales</property>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment203">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -7961,25 +7807,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox198">
-=======
 		<widget class="GtkHBox" id="hbox195">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image218">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-find</property>
-=======
 		    <widget class="GtkImage" id="image216">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-info</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -7994,15 +7830,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label473">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  Recherche</property>
-=======
 		    <widget class="GtkLabel" id="label462">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Taux de participation des electeurs</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -8029,41 +7859,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">456</property>
-	  <property name="y">88</property>
-=======
 	  <property name="x">256</property>
 	  <property name="y">96</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonAfiicheListe">
-	  <property name="width_request">152</property>
-	  <property name="height_request">37</property>
-=======
 	<widget class="GtkButton" id="Taux_participation_HF">
 	  <property name="width_request">360</property>
 	  <property name="height_request">48</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonAfiicheListe_clicked" last_modification_time="Wed, 14 Dec 2022 20:44:37 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment210">
-=======
 	  <signal name="clicked" handler="on_Taux_participation_HF_clicked" last_modification_time="Wed, 14 Dec 2022 14:40:04 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment201">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -8075,25 +7887,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox202">
-=======
 		<widget class="GtkHBox" id="hbox193">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image222">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-refresh</property>
-=======
 		    <widget class="GtkImage" id="image214">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-dialog-info</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -8108,15 +7910,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label478">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">   Actualiser</property>
-=======
 		    <widget class="GtkLabel" id="label460">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Taux de participation des hommes et des femmes </property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -8143,39 +7939,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">640</property>
-	  <property name="y">240</property>
-=======
 	  <property name="x">528</property>
 	  <property name="y">96</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonAjoutCandidat">
-=======
 	<widget class="GtkButton" id="Modifier_gest_elec">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">150</property>
 	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonAjoutCandidat_clicked" last_modification_time="Wed, 14 Dec 2022 22:16:22 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment209">
-=======
 	  <signal name="clicked" handler="on_Modifier_gest_elec_clicked" last_modification_time="Wed, 14 Dec 2022 14:43:58 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment200">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -8187,25 +7967,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox201">
-=======
 		<widget class="GtkHBox" id="hbox192">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image221">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-add</property>
-=======
 		    <widget class="GtkImage" id="image213">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-edit</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -8220,19 +7990,11 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label476">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;green&quot;&gt;Ajouter&lt;/span&gt;</property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label459">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Modifier</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -8257,39 +8019,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">112</property>
-	  <property name="y">504</property>
-=======
 	  <property name="x">432</property>
 	  <property name="y">384</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonModifierCandidat">
-=======
 	<widget class="GtkButton" id="Ajouter_gest_elec">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">150</property>
 	  <property name="height_request">40</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonModifierCandidat_clicked" last_modification_time="Wed, 14 Dec 2022 22:16:34 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment207">
-=======
 	  <signal name="clicked" handler="on_Ajouter_gest_elec_clicked" last_modification_time="Wed, 14 Dec 2022 14:43:31 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment199">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -8301,25 +8047,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox199">
-=======
 		<widget class="GtkHBox" id="hbox191">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image219">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-edit</property>
-=======
 		    <widget class="GtkImage" id="image212">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-add</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -8334,19 +8070,11 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label474">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;blue&quot;&gt;Modifier&lt;/span&gt;</property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label458">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Ajouter</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -8371,41 +8099,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">312</property>
-	  <property name="y">504</property>
-=======
 	  <property name="x">224</property>
 	  <property name="y">384</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonQuitter">
-	  <property name="width_request">88</property>
-	  <property name="height_request">30</property>
-=======
 	<widget class="GtkButton" id="afficher_gest_elec">
 	  <property name="width_request">96</property>
 	  <property name="height_request">40</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonQuitter_clicked" last_modification_time="Wed, 14 Dec 2022 20:51:11 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment205">
-=======
 	  <signal name="clicked" handler="on_afficher_gest_elec_clicked" last_modification_time="Wed, 14 Dec 2022 14:42:49 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment198">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -8417,25 +8127,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox197">
-=======
 		<widget class="GtkHBox" id="hbox190">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image217">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-quit</property>
-=======
 		    <widget class="GtkImage" id="image211">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-justify-fill</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -8450,15 +8150,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label472">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  Quitter</property>
-=======
 		    <widget class="GtkLabel" id="label457">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Afficher</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -8485,41 +8179,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">712</property>
-	  <property name="y">8</property>
-=======
 	  <property name="x">856</property>
 	  <property name="y">248</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonSupprimerCandidat">
-	  <property name="width_request">150</property>
-	  <property name="height_request">40</property>
-=======
 	<widget class="GtkButton" id="quitter2">
 	  <property name="width_request">88</property>
 	  <property name="height_request">30</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonSupprimerCandidat_clicked" last_modification_time="Wed, 14 Dec 2022 20:47:42 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment208">
-=======
 	  <signal name="clicked" handler="on_quitter2_clicked" last_modification_time="Wed, 14 Dec 2022 14:45:20 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment204">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -8531,27 +8207,17 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox200">
-=======
 		<widget class="GtkHBox" id="hbox196">
 		  <property name="width_request">74</property>
 		  <property name="height_request">28</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image220">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-delete</property>
-=======
 		    <widget class="GtkImage" id="image217">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-quit</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -8566,20 +8232,12 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label475">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;red&quot;&gt;Supprimer&lt;/span&gt;</property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label463">
 		      <property name="width_request">55</property>
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Quitter</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -8604,63 +8262,12 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">520</property>
-	  <property name="y">504</property>
-=======
 	  <property name="x">864</property>
 	  <property name="y">16</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label477">
-	  <property name="width_request">328</property>
-	  <property name="height_request">40</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;AFFICHAGE DES LISTES ELECTORALES :&lt;/span&gt;&lt;/b&gt;</property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="mnemonic_widget">buttonQuitter</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">224</property>
-	  <property name="y">8</property>
-	</packing>
-      </child>
-    </widget>
-  </child>
-</widget>
-
-<widget class="GtkWindow" id="windowAjouterCandidat">
-  <property name="width_request">800</property>
-  <property name="height_request">544</property>
-  <property name="visible">True</property>
-  <property name="title" translatable="yes">Ajout_Candidat</property>
-  <property name="type">GTK_WINDOW_TOPLEVEL</property>
-  <property name="window_position">GTK_WIN_POS_NONE</property>
-  <property name="modal">False</property>
-  <property name="resizable">True</property>
-  <property name="destroy_with_parent">False</property>
-  <property name="decorated">True</property>
-  <property name="skip_taskbar_hint">False</property>
-  <property name="skip_pager_hint">False</property>
-  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
-  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
-=======
 	<widget class="GtkButton" id="Supprimer_gest_elec">
 	  <property name="width_request">150</property>
 	  <property name="height_request">40</property>
@@ -8776,20 +8383,10 @@ par Liste Electorales</property>
   <property name="skip_pager_hint">False</property>
   <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
   <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
   <property name="focus_on_map">True</property>
   <property name="urgency_hint">False</property>
 
   <child>
-<<<<<<< HEAD
-    <widget class="GtkFixed" id="fixed44">
-      <property name="visible">True</property>
-
-      <child>
-	<widget class="GtkEntry" id="entryidListeAjouterCandidat">
-	  <property name="width_request">200</property>
-	  <property name="height_request">32</property>
-=======
     <widget class="GtkFixed" id="fixed43">
       <property name="visible">True</property>
 
@@ -8797,39 +8394,23 @@ par Liste Electorales</property>
 	<widget class="GtkEntry" id="entry_id_ajout_elec">
 	  <property name="width_request">176</property>
 	  <property name="height_request">35</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="editable">True</property>
 	  <property name="visibility">True</property>
-<<<<<<< HEAD
-	  <property name="max_length">6</property>
-=======
 	  <property name="max_length">0</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="text" translatable="yes"></property>
 	  <property name="has_frame">True</property>
 	  <property name="invisible_char">•</property>
 	  <property name="activates_default">False</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">392</property>
-=======
 	  <property name="x">144</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="y">96</property>
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label479">
-	  <property name="width_request">57</property>
-	  <property name="height_request">17</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-=======
 	<widget class="GtkSpinButton" id="jour_ajout_elec">
 	  <property name="width_request">64</property>
 	  <property name="height_request">24</property>
@@ -8895,7 +8476,6 @@ par Liste Electorales</property>
 	  <property name="height_request">41</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">Mois :</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -8912,33 +8492,11 @@ par Liste Electorales</property>
 	</widget>
 	<packing>
 	  <property name="x">272</property>
-<<<<<<< HEAD
-	  <property name="y">40</property>
-=======
 	  <property name="y">160</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkEntry" id="entryIdCandidatAjouter">
-	  <property name="width_request">200</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">8</property>
-	  <property name="text" translatable="yes"></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
-	</widget>
-	<packing>
-	  <property name="x">392</property>
-	  <property name="y">200</property>
-=======
 	<widget class="GtkLabel" id="label468">
 	  <property name="width_request">88</property>
 	  <property name="height_request">40</property>
@@ -8961,29 +8519,10 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">400</property>
 	  <property name="y">160</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkSpinButton" id="spinbuttonOrdreCandidat">
-	  <property name="width_request">60</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="climb_rate">1</property>
-	  <property name="digits">0</property>
-	  <property name="numeric">False</property>
-	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
-	  <property name="snap_to_ticks">False</property>
-	  <property name="wrap">False</property>
-	  <property name="adjustment">1 0 3 1 10 10</property>
-	</widget>
-	<packing>
-	  <property name="x">392</property>
-	  <property name="y">152</property>
-=======
 	<widget class="GtkLabel" id="label469">
 	  <property name="width_request">136</property>
 	  <property name="height_request">33</property>
@@ -9006,22 +8545,10 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">32</property>
 	  <property name="y">232</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label489">
-	  <property name="width_request">208</property>
-	  <property name="height_request">41</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Id Liste:&lt;/span&gt;&lt;/b&gt;    </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">True</property>
-=======
 	<widget class="GtkLabel" id="label470">
 	  <property name="width_request">256</property>
 	  <property name="height_request">40</property>
@@ -9031,44 +8558,23 @@ par Liste Electorales</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="selectable">False</property>
 	  <property name="xalign">0.5</property>
 	  <property name="yalign">0.5</property>
 	  <property name="xpad">0</property>
 	  <property name="ypad">0</property>
-<<<<<<< HEAD
-	  <property name="mnemonic_widget">entryidListeAjouterCandidat</property>
-=======
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
 	  <property name="width_chars">-1</property>
 	  <property name="single_line_mode">False</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">160</property>
-	  <property name="y">96</property>
-=======
 	  <property name="x">184</property>
 	  <property name="y">16</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label484">
-	  <property name="width_request">244</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Identifiant de l'agent :&lt;/span&gt;&lt;/b&gt;    </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">True</property>
-=======
 	<widget class="GtkLabel" id="label465">
 	  <property name="width_request">105</property>
 	  <property name="height_request">33</property>
@@ -9078,44 +8584,23 @@ par Liste Electorales</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="selectable">False</property>
 	  <property name="xalign">0.5</property>
 	  <property name="yalign">0.5</property>
 	  <property name="xpad">0</property>
 	  <property name="ypad">0</property>
-<<<<<<< HEAD
-	  <property name="mnemonic_widget">spinbuttonOrdreCandidat</property>
-=======
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
 	  <property name="width_chars">-1</property>
 	  <property name="single_line_mode">False</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">136</property>
-	  <property name="y">152</property>
-=======
 	  <property name="x">32</property>
 	  <property name="y">96</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label482">
-	  <property name="width_request">224</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Ordre Candidat :&lt;/span&gt;&lt;/b&gt;    </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">True</property>
-=======
 	<widget class="GtkLabel" id="label466">
 	  <property name="width_request">160</property>
 	  <property name="height_request">48</property>
@@ -9125,42 +8610,26 @@ par Liste Electorales</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="selectable">False</property>
 	  <property name="xalign">0.5</property>
 	  <property name="yalign">0.5</property>
 	  <property name="xpad">0</property>
 	  <property name="ypad">0</property>
-<<<<<<< HEAD
-	  <property name="mnemonic_widget">entryIdCandidatAjouter</property>
-=======
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
 	  <property name="width_chars">-1</property>
 	  <property name="single_line_mode">False</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">144</property>
-	  <property name="y">200</property>
-=======
 	  <property name="x">40</property>
 	  <property name="y">160</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="labelerrorIdLCandidatAjoutCandidatlabel492">
-	  <property name="width_request">96</property>
-	  <property name="height_request">32</property>
-=======
 	<widget class="GtkLabel" id="label_error_ajout_fatma">
 	  <property name="width_request">272</property>
 	  <property name="height_request">48</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes"></property>
 	  <property name="use_underline">False</property>
@@ -9178,40 +8647,23 @@ par Liste Electorales</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">632</property>
-	  <property name="y">200</property>
-=======
 	  <property name="x">336</property>
 	  <property name="y">96</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonRetourAjout">
-	  <property name="width_request">74</property>
-=======
 	<widget class="GtkButton" id="quitter3">
 	  <property name="width_request">80</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="height_request">29</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonRetourAjout_clicked" last_modification_time="Wed, 14 Dec 2022 22:13:08 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment211">
-=======
 	  <signal name="clicked" handler="on_quitter3_clicked" last_modification_time="Wed, 14 Dec 2022 19:29:14 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment207">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -9223,25 +8675,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox203">
-=======
 		<widget class="GtkHBox" id="hbox199">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image223">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-go-back</property>
-=======
 		    <widget class="GtkImage" id="image220">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-quit</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -9256,15 +8698,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label480">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">Retour</property>
-=======
 		    <widget class="GtkLabel" id="label473">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Quitter</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -9291,41 +8727,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">8</property>
-	  <property name="y">8</property>
-=======
 	  <property name="x">544</property>
 	  <property name="y">16</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonQuitterAjout">
-	  <property name="width_request">88</property>
-	  <property name="height_request">30</property>
-=======
 	<widget class="GtkButton" id="button_retour8">
 	  <property name="width_request">74</property>
 	  <property name="height_request">29</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonQuitterAjout_clicked" last_modification_time="Wed, 14 Dec 2022 22:12:34 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment214">
-=======
 	  <signal name="clicked" handler="on_button_retour8_clicked" last_modification_time="Wed, 14 Dec 2022 19:31:16 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment208">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -9337,27 +8755,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox206">
-		  <property name="width_request">74</property>
-		  <property name="height_request">28</property>
-=======
 		<widget class="GtkHBox" id="hbox200">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image226">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-quit</property>
-=======
 		    <widget class="GtkImage" id="image221">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-go-back</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -9372,16 +8778,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label490">
-		      <property name="width_request">55</property>
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">Quitter</property>
-=======
 		    <widget class="GtkLabel" id="label474">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Retour</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -9408,22 +8807,12 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">688</property>
-	  <property name="y">8</property>
-=======
 	  <property name="x">32</property>
 	  <property name="y">16</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonAnnulerEnregistrerCandidat">
-	  <property name="width_request">120</property>
-	  <property name="height_request">37</property>
-=======
 	<widget class="GtkRadioButton" id="radiobutton_municipale">
 	  <property name="width_request">116</property>
 	  <property name="height_request">24</property>
@@ -9491,22 +8880,14 @@ par Liste Electorales</property>
 	<widget class="GtkButton" id="Enregistrer_ajout_elec">
 	  <property name="width_request">104</property>
 	  <property name="height_request">40</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonAnnulerEnregistrerCandidat_clicked" last_modification_time="Wed, 14 Dec 2022 22:13:55 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment212">
-=======
 	  <signal name="clicked" handler="on_Enregistrer_ajout_elec_clicked" last_modification_time="Wed, 14 Dec 2022 19:32:40 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment205">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -9518,25 +8899,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox204">
-=======
 		<widget class="GtkHBox" id="hbox197">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image224">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-cancel</property>
-=======
 		    <widget class="GtkImage" id="image218">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-save</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -9551,19 +8922,11 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label485">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;red&quot;&gt;Annuler&lt;/span&gt;  </property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label471">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Enregistrer</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -9588,67 +8951,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">488</property>
-	  <property name="y">488</property>
-=======
 	  <property name="x">400</property>
 	  <property name="y">320</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="labelerrorIdLListeAjoutCandidat">
-	  <property name="width_request">96</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">648</property>
-	  <property name="y">96</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkButton" id="buttonEnregistrerCandidat">
-	  <property name="width_request">120</property>
-	  <property name="height_request">37</property>
-=======
 	<widget class="GtkButton" id="Annuler_ajout_elec">
 	  <property name="width_request">96</property>
 	  <property name="height_request">40</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonEnregistrerCandidat_clicked" last_modification_time="Wed, 14 Dec 2022 22:04:59 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment213">
-=======
 	  <signal name="clicked" handler="on_Annuler_ajout_elec_clicked" last_modification_time="Wed, 14 Dec 2022 19:32:54 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment206">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -9660,25 +8979,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox205">
-=======
 		<widget class="GtkHBox" id="hbox198">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image225">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-save</property>
-=======
 		    <widget class="GtkImage" id="image219">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-cancel</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -9693,19 +9002,11 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label486">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;green&quot;&gt;Enregistrer &lt;/span&gt;    </property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label472">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Annuler</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -9730,51 +9031,17 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">336</property>
-	  <property name="y">488</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkCheckButton" id="checkbuttonVerfierAjouter">
-	  <property name="width_request">280</property>
-	  <property name="height_request">40</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="label" translatable="yes">Accepter les conditions generales</property>
-	  <property name="use_underline">True</property>
-	  <property name="relief">GTK_RELIEF_NORMAL</property>
-	  <property name="focus_on_click">True</property>
-	  <property name="active">False</property>
-	  <property name="inconsistent">False</property>
-	  <property name="draw_indicator">True</property>
-	  <signal name="toggled" handler="on_checkbuttonVerfierAjouter_toggled" last_modification_time="Thu, 15 Dec 2022 00:05:27 GMT"/>
-	</widget>
-	<packing>
-	  <property name="x">256</property>
-	  <property name="y">376</property>
-=======
 	  <property name="x">512</property>
 	  <property name="y">320</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
     </widget>
   </child>
 </widget>
 
-<<<<<<< HEAD
-<widget class="GtkWindow" id="windowSupprimerCandiat">
-  <property name="width_request">800</property>
-  <property name="height_request">544</property>
-  <property name="visible">True</property>
-  <property name="title" translatable="yes">Supprime_Candidat</property>
-=======
 <widget class="GtkWindow" id="Modifie_gest_elec">
   <property name="visible">True</property>
   <property name="title" translatable="yes">Modifie_gest_elec</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
   <property name="modal">False</property>
@@ -9789,30 +9056,6 @@ par Liste Electorales</property>
   <property name="urgency_hint">False</property>
 
   <child>
-<<<<<<< HEAD
-    <widget class="GtkFixed" id="fixed45">
-      <property name="width_request">608</property>
-      <property name="height_request">325</property>
-      <property name="visible">True</property>
-
-      <child>
-	<widget class="GtkEntry" id="entryidListeSupprimerCandidat">
-	  <property name="width_request">160</property>
-	  <property name="height_request">35</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">6</property>
-	  <property name="text" translatable="yes"></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
-	</widget>
-	<packing>
-	  <property name="x">376</property>
-	  <property name="y">120</property>
-=======
     <widget class="GtkFixed" id="fixed44">
       <property name="visible">True</property>
 
@@ -9833,21 +9076,10 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">208</property>
 	  <property name="y">168</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkFixed" id="fixed46">
-	  <property name="width_request">0</property>
-	  <property name="height_request">0</property>
-	  <property name="visible">True</property>
-	</widget>
-	<packing>
-	  <property name="x">0</property>
-	  <property name="y">0</property>
-=======
 	<widget class="GtkSpinButton" id="mois_modifie_elec">
 	  <property name="width_request">60</property>
 	  <property name="height_request">27</property>
@@ -9864,16 +9096,11 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">344</property>
 	  <property name="y">168</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkSpinButton" id="spinbuttonordreCandidatSupprimer">
-=======
 	<widget class="GtkSpinButton" id="Annee_modifie_elec">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">60</property>
 	  <property name="height_request">27</property>
 	  <property name="visible">True</property>
@@ -9884,32 +9111,15 @@ par Liste Electorales</property>
 	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
 	  <property name="snap_to_ticks">False</property>
 	  <property name="wrap">False</property>
-<<<<<<< HEAD
-	  <property name="adjustment">1 1 3 1 10 10</property>
-	</widget>
-	<packing>
-	  <property name="x">400</property>
-	  <property name="y">176</property>
-=======
 	  <property name="adjustment">2022 2022 2050 1 10 10</property>
 	</widget>
 	<packing>
 	  <property name="x">472</property>
 	  <property name="y">168</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label492">
-	  <property name="width_request">192</property>
-	  <property name="height_request">33</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"> &lt;b&gt;&lt;span color=&quot;black&quot;&gt;Supprimer Candidat&lt;/span&gt;&lt;/b&gt;  </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-=======
 	<widget class="GtkLabel" id="label475">
 	  <property name="width_request">136</property>
 	  <property name="height_request">33</property>
@@ -9917,7 +9127,6 @@ par Liste Electorales</property>
 	  <property name="label" translatable="yes">Type d'election :</property>
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -9931,26 +9140,12 @@ par Liste Electorales</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">304</property>
-	  <property name="y">8</property>
-=======
 	  <property name="x">32</property>
 	  <property name="y">232</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label495">
-	  <property name="width_request">432</property>
-	  <property name="height_request">40</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;red&quot;&gt;Êtes-vous sûr de vouloir supprimer ce bureau de vote ?&lt;/span&gt;&lt;/b&gt;    </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-=======
 	<widget class="GtkLabel" id="label476">
 	  <property name="width_request">72</property>
 	  <property name="height_request">41</property>
@@ -9958,7 +9153,6 @@ par Liste Electorales</property>
 	  <property name="label" translatable="yes">Mois :</property>
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -9972,26 +9166,12 @@ par Liste Electorales</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">192</property>
-	  <property name="y">232</property>
-=======
 	  <property name="x">272</property>
 	  <property name="y">160</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label493">
-	  <property name="width_request">104</property>
-	  <property name="height_request">33</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;IDENTIFIANT :&lt;/span&gt;&lt;/b&gt;   </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-=======
 	<widget class="GtkLabel" id="label477">
 	  <property name="width_request">160</property>
 	  <property name="height_request">48</property>
@@ -9999,7 +9179,6 @@ par Liste Electorales</property>
 	  <property name="label" translatable="yes">Date d'election :    Jour</property>
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -10013,26 +9192,12 @@ par Liste Electorales</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">248</property>
-	  <property name="y">120</property>
-=======
 	  <property name="x">40</property>
 	  <property name="y">160</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="label500">
-	  <property name="width_request">152</property>
-	  <property name="height_request">40</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Ordre de Candidat :&lt;/span&gt;&lt;/b&gt;   </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-=======
 	<widget class="GtkLabel" id="label478">
 	  <property name="width_request">88</property>
 	  <property name="height_request">40</property>
@@ -10040,7 +9205,6 @@ par Liste Electorales</property>
 	  <property name="label" translatable="yes">Annee :</property>
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">False</property>
 	  <property name="selectable">False</property>
@@ -10054,42 +9218,12 @@ par Liste Electorales</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">232</property>
-	  <property name="y">168</property>
-=======
 	  <property name="x">400</property>
 	  <property name="y">160</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonAnnulerSupprimer">
-	  <property name="width_request">80</property>
-	  <property name="height_request">29</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="relief">GTK_RELIEF_NORMAL</property>
-	  <property name="focus_on_click">True</property>
-	  <signal name="clicked" handler="on_buttonAnnulerSupprimer_clicked" last_modification_time="Wed, 14 Dec 2022 22:27:09 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment215">
-	      <property name="visible">True</property>
-	      <property name="xalign">0.5</property>
-	      <property name="yalign">0.5</property>
-	      <property name="xscale">0</property>
-	      <property name="yscale">0</property>
-	      <property name="top_padding">0</property>
-	      <property name="bottom_padding">0</property>
-	      <property name="left_padding">0</property>
-	      <property name="right_padding">0</property>
-
-	      <child>
-		<widget class="GtkHBox" id="hbox207">
-=======
 	<widget class="GtkLabel" id="label479">
 	  <property name="width_request">256</property>
 	  <property name="height_request">40</property>
@@ -10165,17 +9299,12 @@ par Liste Electorales</property>
 
 	      <child>
 		<widget class="GtkHBox" id="hbox203">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image227">
-=======
 		    <widget class="GtkImage" id="image224">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-go-back</property>
 		      <property name="icon_size">4</property>
@@ -10192,11 +9321,7 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label491">
-=======
 		    <widget class="GtkLabel" id="label483">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Retour</property>
 		      <property name="use_underline">True</property>
@@ -10225,67 +9350,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">16</property>
-	  <property name="y">8</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="labelerrorIdLListeSupprimeCandidat">
-	  <property name="width_request">136</property>
-	  <property name="height_request">24</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">608</property>
-	  <property name="y">128</property>
-=======
 	  <property name="x">32</property>
 	  <property name="y">16</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonSupprimer">
-	  <property name="width_request">136</property>
-	  <property name="height_request">37</property>
-=======
 	<widget class="GtkButton" id="quitter9">
 	  <property name="width_request">80</property>
 	  <property name="height_request">29</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonSupprimer_clicked" last_modification_time="Wed, 14 Dec 2022 22:26:33 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment216">
-=======
 	  <signal name="clicked" handler="on_quitter9_clicked" last_modification_time="Wed, 14 Dec 2022 19:49:58 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment212">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -10297,25 +9378,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox208">
-=======
 		<widget class="GtkHBox" id="hbox204">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image228">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-delete</property>
-=======
 		    <widget class="GtkImage" id="image225">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-quit</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -10330,19 +9401,11 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label494">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;red&quot;&gt;Supprime&lt;/span&gt;</property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label484">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Quitter</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -10367,10 +9430,6 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">336</property>
-	  <property name="y">352</property>
-=======
 	  <property name="x">552</property>
 	  <property name="y">8</property>
 	</packing>
@@ -10398,255 +9457,53 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">152</property>
 	  <property name="y">96</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkRadioButton" id="suppoui">
-=======
 	<widget class="GtkRadioButton" id="radiobutton_modifie_municipale">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="width_request">116</property>
 	  <property name="height_request">24</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
-<<<<<<< HEAD
-	  <property name="label" translatable="yes">Oui</property>
-=======
 	  <property name="label" translatable="yes">Municipale</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="use_underline">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
 	  <property name="active">False</property>
 	  <property name="inconsistent">False</property>
 	  <property name="draw_indicator">True</property>
-<<<<<<< HEAD
-	  <signal name="toggled" handler="on_suppoui_toggled" last_modification_time="Thu, 15 Dec 2022 00:19:07 GMT"/>
-	</widget>
-	<packing>
-	  <property name="x">296</property>
-	  <property name="y">272</property>
-=======
 	  <signal name="toggled" handler="on_radiobutton_modifie_municipale_toggled" last_modification_time="Wed, 14 Dec 2022 19:46:55 GMT"/>
 	</widget>
 	<packing>
 	  <property name="x">176</property>
 	  <property name="y">240</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkRadioButton" id="suppnon">
-	  <property name="width_request">116</property>
-	  <property name="height_request">24</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="label" translatable="yes">Non</property>
-=======
 	<widget class="GtkRadioButton" id="radiobutton_modifie_presidentielle">
 	  <property name="width_request">136</property>
 	  <property name="height_request">24</property>
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="label" translatable="yes">Presidentielle</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="use_underline">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
 	  <property name="active">False</property>
 	  <property name="inconsistent">False</property>
 	  <property name="draw_indicator">True</property>
-<<<<<<< HEAD
-	  <property name="group">suppoui</property>
-	  <signal name="toggled" handler="on_suppnon_toggled" last_modification_time="Thu, 15 Dec 2022 00:18:48 GMT"/>
-	</widget>
-	<packing>
-	  <property name="x">448</property>
-	  <property name="y">272</property>
-	</packing>
-      </child>
-    </widget>
-  </child>
-</widget>
-
-<widget class="GtkWindow" id="windowmodif">
-  <property name="width_request">800</property>
-  <property name="height_request">544</property>
-  <property name="visible">True</property>
-  <property name="title" translatable="yes">Modfier_Candidat</property>
-  <property name="type">GTK_WINDOW_TOPLEVEL</property>
-  <property name="window_position">GTK_WIN_POS_NONE</property>
-  <property name="modal">False</property>
-  <property name="resizable">True</property>
-  <property name="destroy_with_parent">False</property>
-  <property name="decorated">True</property>
-  <property name="skip_taskbar_hint">False</property>
-  <property name="skip_pager_hint">False</property>
-  <property name="type_hint">GDK_WINDOW_TYPE_HINT_NORMAL</property>
-  <property name="gravity">GDK_GRAVITY_NORTH_WEST</property>
-  <property name="focus_on_map">True</property>
-  <property name="urgency_hint">False</property>
-
-  <child>
-    <widget class="GtkFixed" id="fixed48">
-      <property name="visible">True</property>
-
-      <child>
-	<widget class="GtkLabel" id="label502">
-	  <property name="width_request">57</property>
-	  <property name="height_request">17</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">272</property>
-	  <property name="y">40</property>
-=======
 	  <property name="group">radiobutton_modifie_municipale</property>
 	  <signal name="toggled" handler="on_radiobutton_modifie_presidentielle_toggled" last_modification_time="Wed, 14 Dec 2022 19:47:40 GMT"/>
 	</widget>
 	<packing>
 	  <property name="x">320</property>
 	  <property name="y">240</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkEntry" id="entryIdCandidatModfier">
-	  <property name="width_request">200</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">8</property>
-	  <property name="text" translatable="yes"></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
-	</widget>
-	<packing>
-	  <property name="x">392</property>
-	  <property name="y">200</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkSpinButton" id="spinbutton2">
-	  <property name="width_request">60</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="climb_rate">1</property>
-	  <property name="digits">0</property>
-	  <property name="numeric">False</property>
-	  <property name="update_policy">GTK_UPDATE_ALWAYS</property>
-	  <property name="snap_to_ticks">False</property>
-	  <property name="wrap">False</property>
-	  <property name="adjustment">1 0 3 1 10 10</property>
-	</widget>
-	<packing>
-	  <property name="x">392</property>
-	  <property name="y">152</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="label503">
-	  <property name="width_request">208</property>
-	  <property name="height_request">41</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Id Liste:&lt;/span&gt;&lt;/b&gt;    </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">True</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">160</property>
-	  <property name="y">96</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="label504">
-	  <property name="width_request">244</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Identifiant de l'agent :&lt;/span&gt;&lt;/b&gt;    </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">True</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">136</property>
-	  <property name="y">152</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="label505">
-	  <property name="width_request">224</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Ordre Candidat :&lt;/span&gt;&lt;/b&gt;    </property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">True</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">144</property>
-	  <property name="y">200</property>
-=======
 	<widget class="GtkButton" id="Enregistrer_modifie_elec">
 	  <property name="width_request">104</property>
 	  <property name="height_request">40</property>
@@ -10723,76 +9580,10 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">400</property>
 	  <property name="y">320</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkCheckButton" id="checkbutton1">
-	  <property name="width_request">280</property>
-	  <property name="height_request">40</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="label" translatable="yes">Accepter les conditions generales</property>
-	  <property name="use_underline">True</property>
-	  <property name="relief">GTK_RELIEF_NORMAL</property>
-	  <property name="focus_on_click">True</property>
-	  <property name="active">False</property>
-	  <property name="inconsistent">False</property>
-	  <property name="draw_indicator">True</property>
-	  <signal name="toggled" handler="on_checkbutton_ajout_BV_toggled" last_modification_time="Sat, 10 Dec 2022 13:45:02 GMT"/>
-	</widget>
-	<packing>
-	  <property name="x">256</property>
-	  <property name="y">376</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkEntry" id="entrysupp">
-	  <property name="width_request">200</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">6</property>
-	  <property name="text" translatable="yes"></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
-	</widget>
-	<packing>
-	  <property name="x">392</property>
-	  <property name="y">96</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="labelmodifier1">
-	  <property name="width_request">96</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">648</property>
-	  <property name="y">96</property>
-=======
 	<widget class="GtkButton" id="Annuler_modifie_elec">
 	  <property name="width_request">96</property>
 	  <property name="height_request">40</property>
@@ -10912,24 +9703,15 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">136</property>
 	  <property name="y">88</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkLabel" id="labelmodifier2">
-	  <property name="width_request">96</property>
-	  <property name="height_request">32</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-=======
 	<widget class="GtkLabel" id="label485">
 	  <property name="width_request">105</property>
 	  <property name="height_request">33</property>
 	  <property name="visible">True</property>
 	  <property name="label" translatable="yes">Identifiant :</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="use_underline">False</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -10945,41 +9727,23 @@ par Liste Electorales</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">632</property>
-	  <property name="y">200</property>
-=======
 	  <property name="x">40</property>
 	  <property name="y">88</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonAnnulerModifer">
-	  <property name="width_request">120</property>
-	  <property name="height_request">37</property>
-=======
 	<widget class="GtkButton" id="confirmer_supp_gest_elec">
 	  <property name="width_request">104</property>
 	  <property name="height_request">32</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonAnnulerModifer_clicked" last_modification_time="Wed, 14 Dec 2022 23:04:13 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment221">
-=======
 	  <signal name="clicked" handler="on_confirmer_supp_gest_elec_clicked" last_modification_time="Wed, 14 Dec 2022 20:02:06 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment213">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -10991,25 +9755,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox213">
-=======
 		<widget class="GtkHBox" id="hbox205">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image233">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-cancel</property>
-=======
 		    <widget class="GtkImage" id="image226">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-apply</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -11024,19 +9778,11 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label511">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;red&quot;&gt;Annuler&lt;/span&gt;  </property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label486">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Confirmer</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -11061,41 +9807,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">488</property>
-	  <property name="y">488</property>
-=======
 	  <property name="x">160</property>
 	  <property name="y">160</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonEnergisterModfier">
-	  <property name="width_request">120</property>
-	  <property name="height_request">37</property>
-=======
 	<widget class="GtkButton" id="button_retour_supp_elec">
 	  <property name="width_request">74</property>
 	  <property name="height_request">29</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonEnergisterModfier_clicked" last_modification_time="Wed, 14 Dec 2022 23:03:35 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment220">
-=======
 	  <signal name="clicked" handler="on_button_retour_supp_elec_clicked" last_modification_time="Wed, 14 Dec 2022 20:10:26 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment214">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -11107,25 +9835,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox212">
-=======
 		<widget class="GtkHBox" id="hbox206">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image232">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-save</property>
-=======
 		    <widget class="GtkImage" id="image227">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-go-back</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -11140,19 +9858,11 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label510">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  &lt;span color=&quot;green&quot;&gt;Enregistrer &lt;/span&gt;    </property>
-		      <property name="use_underline">True</property>
-		      <property name="use_markup">True</property>
-=======
 		    <widget class="GtkLabel" id="label487">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Retour</property>
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
 		      <property name="wrap">False</property>
 		      <property name="selectable">False</property>
@@ -11177,17 +9887,6 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">336</property>
-	  <property name="y">488</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkButton" id="buttonQuitterMod">
-	  <property name="width_request">88</property>
-	  <property name="height_request">30</property>
-=======
 	  <property name="x">16</property>
 	  <property name="y">16</property>
 	</packing>
@@ -11220,22 +9919,14 @@ par Liste Electorales</property>
 	<widget class="GtkButton" id="Taux1_electeur">
 	  <property name="width_request">280</property>
 	  <property name="height_request">56</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonQuitterMod_clicked" last_modification_time="Wed, 14 Dec 2022 23:03:05 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment219">
-=======
 	  <signal name="clicked" handler="on_Taux1_electeur_clicked" last_modification_time="Wed, 14 Dec 2022 20:17:58 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment216">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -11247,27 +9938,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox211">
-		  <property name="width_request">74</property>
-		  <property name="height_request">28</property>
-=======
 		<widget class="GtkHBox" id="hbox208">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image231">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-quit</property>
-=======
 		    <widget class="GtkImage" id="image229">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-refresh</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -11282,16 +9961,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label509">
-		      <property name="width_request">55</property>
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">Quitter</property>
-=======
 		    <widget class="GtkLabel" id="label489">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Taux de participation des electeurs</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -11318,41 +9990,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">688</property>
-	  <property name="y">8</property>
-=======
 	  <property name="x">80</property>
 	  <property name="y">104</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonRetourMod">
-	  <property name="width_request">74</property>
-	  <property name="height_request">29</property>
-=======
 	<widget class="GtkButton" id="retour_Taux1">
 	  <property name="width_request">80</property>
 	  <property name="height_request">32</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonRetourMod_clicked" last_modification_time="Wed, 14 Dec 2022 23:02:19 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment218">
-=======
 	  <signal name="clicked" handler="on_retour_Taux1_clicked" last_modification_time="Wed, 14 Dec 2022 20:17:22 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment215">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -11364,25 +10018,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox210">
-=======
 		<widget class="GtkHBox" id="hbox207">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image230">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-go-back</property>
-=======
 		    <widget class="GtkImage" id="image228">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-undo</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -11397,11 +10041,7 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label508">
-=======
 		    <widget class="GtkLabel" id="label488">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Retour</property>
 		      <property name="use_underline">True</property>
@@ -11430,10 +10070,6 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">8</property>
-	  <property name="y">8</property>
-=======
 	  <property name="x">24</property>
 	  <property name="y">24</property>
 	</packing>
@@ -11462,24 +10098,15 @@ par Liste Electorales</property>
 	<packing>
 	  <property name="x">176</property>
 	  <property name="y">208</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
     </widget>
   </child>
 </widget>
 
-<<<<<<< HEAD
-<widget class="GtkWindow" id="windowVote">
-  <property name="width_request">800</property>
-  <property name="height_request">544</property>
-  <property name="visible">True</property>
-  <property name="title" translatable="yes">vote </property>
-=======
 <widget class="GtkWindow" id="window_Taux2_HF">
   <property name="visible">True</property>
   <property name="title" translatable="yes">window_Taux2_HF</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
   <property name="type">GTK_WINDOW_TOPLEVEL</property>
   <property name="window_position">GTK_WIN_POS_NONE</property>
   <property name="modal">False</property>
@@ -11494,113 +10121,6 @@ par Liste Electorales</property>
   <property name="urgency_hint">False</property>
 
   <child>
-<<<<<<< HEAD
-    <widget class="GtkFixed" id="fixed49">
-      <property name="visible">True</property>
-
-      <child>
-	<widget class="GtkEntry" id="entryvote">
-	  <property name="width_request">168</property>
-	  <property name="height_request">35</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">3</property>
-	  <property name="text" translatable="yes"></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
-	</widget>
-	<packing>
-	  <property name="x">152</property>
-	  <property name="y">184</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkEntry" id="entryvoteid">
-	  <property name="width_request">168</property>
-	  <property name="height_request">35</property>
-	  <property name="visible">True</property>
-	  <property name="can_focus">True</property>
-	  <property name="editable">True</property>
-	  <property name="visibility">True</property>
-	  <property name="max_length">6</property>
-	  <property name="text" translatable="yes"></property>
-	  <property name="has_frame">True</property>
-	  <property name="invisible_char">•</property>
-	  <property name="activates_default">False</property>
-	</widget>
-	<packing>
-	  <property name="x">576</property>
-	  <property name="y">176</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="label517">
-	  <property name="width_request">272</property>
-	  <property name="height_request">49</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Voter&lt;/span&gt;&lt;/b&gt;</property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">264</property>
-	  <property name="y">0</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="label512">
-	  <property name="width_request">120</property>
-	  <property name="height_request">49</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Id Bureau  :&lt;/span&gt;&lt;/b&gt;</property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">16</property>
-	  <property name="y">176</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="label513">
-	  <property name="width_request">128</property>
-	  <property name="height_request">49</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes">&lt;b&gt;&lt;span color=&quot;black&quot;&gt;Id Liste  :&lt;/span&gt;&lt;/b&gt;</property>
-	  <property name="use_underline">True</property>
-	  <property name="use_markup">True</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-=======
     <widget class="GtkFixed" id="fixed47">
       <property name="visible">True</property>
 
@@ -11614,57 +10134,34 @@ par Liste Electorales</property>
 	  <property name="use_markup">False</property>
 	  <property name="justify">GTK_JUSTIFY_LEFT</property>
 	  <property name="wrap">True</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="selectable">False</property>
 	  <property name="xalign">0.5</property>
 	  <property name="yalign">0.5</property>
 	  <property name="xpad">0</property>
 	  <property name="ypad">0</property>
-<<<<<<< HEAD
-	  <property name="mnemonic_widget">entryvoteid</property>
-=======
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
 	  <property name="width_chars">-1</property>
 	  <property name="single_line_mode">False</property>
 	  <property name="angle">0</property>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">400</property>
-	  <property name="y">176</property>
-=======
 	  <property name="x">88</property>
 	  <property name="y">208</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonVoter">
-	  <property name="width_request">152</property>
-	  <property name="height_request">45</property>
-=======
 	<widget class="GtkButton" id="Taux2_HF">
 	  <property name="width_request">368</property>
 	  <property name="height_request">56</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonVoter_clicked" last_modification_time="Wed, 14 Dec 2022 23:51:47 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment224">
-=======
 	  <signal name="clicked" handler="on_Taux2_HF_clicked" last_modification_time="Wed, 14 Dec 2022 20:31:36 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment218">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -11676,25 +10173,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox216">
-=======
 		<widget class="GtkHBox" id="hbox210">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image236">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-apply</property>
-=======
 		    <widget class="GtkImage" id="image231">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-refresh</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -11709,15 +10196,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label519">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  Voter </property>
-=======
 		    <widget class="GtkLabel" id="label491">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Taux de participation des hommes et des femmes </property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -11744,41 +10225,23 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">320</property>
-	  <property name="y">320</property>
-=======
 	  <property name="x">80</property>
 	  <property name="y">120</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	</packing>
       </child>
 
       <child>
-<<<<<<< HEAD
-	<widget class="GtkButton" id="buttonQuitvote">
-	  <property name="width_request">104</property>
-	  <property name="height_request">37</property>
-=======
 	<widget class="GtkButton" id="retour_Taux2_HF">
 	  <property name="width_request">80</property>
 	  <property name="height_request">32</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	  <property name="visible">True</property>
 	  <property name="can_focus">True</property>
 	  <property name="relief">GTK_RELIEF_NORMAL</property>
 	  <property name="focus_on_click">True</property>
-<<<<<<< HEAD
-	  <signal name="clicked" handler="on_buttonQuitvote_clicked" last_modification_time="Wed, 14 Dec 2022 23:52:26 GMT"/>
-
-	  <child>
-	    <widget class="GtkAlignment" id="alignment223">
-=======
 	  <signal name="clicked" handler="on_retour_Taux2_HF_clicked" last_modification_time="Wed, 14 Dec 2022 20:31:12 GMT"/>
 
 	  <child>
 	    <widget class="GtkAlignment" id="alignment217">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 	      <property name="visible">True</property>
 	      <property name="xalign">0.5</property>
 	      <property name="yalign">0.5</property>
@@ -11790,25 +10253,15 @@ par Liste Electorales</property>
 	      <property name="right_padding">0</property>
 
 	      <child>
-<<<<<<< HEAD
-		<widget class="GtkHBox" id="hbox215">
-=======
 		<widget class="GtkHBox" id="hbox209">
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		  <property name="visible">True</property>
 		  <property name="homogeneous">False</property>
 		  <property name="spacing">2</property>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkImage" id="image235">
-		      <property name="visible">True</property>
-		      <property name="stock">gtk-go-back</property>
-=======
 		    <widget class="GtkImage" id="image230">
 		      <property name="visible">True</property>
 		      <property name="stock">gtk-undo</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="icon_size">4</property>
 		      <property name="xalign">0.5</property>
 		      <property name="yalign">0.5</property>
@@ -11823,15 +10276,9 @@ par Liste Electorales</property>
 		  </child>
 
 		  <child>
-<<<<<<< HEAD
-		    <widget class="GtkLabel" id="label518">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">  Retour</property>
-=======
 		    <widget class="GtkLabel" id="label490">
 		      <property name="visible">True</property>
 		      <property name="label" translatable="yes">Retour</property>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 		      <property name="use_underline">True</property>
 		      <property name="use_markup">False</property>
 		      <property name="justify">GTK_JUSTIFY_LEFT</property>
@@ -11858,43 +10305,10 @@ par Liste Electorales</property>
 	  </child>
 	</widget>
 	<packing>
-<<<<<<< HEAD
-	  <property name="x">16</property>
-	  <property name="y">16</property>
-	</packing>
-      </child>
-
-      <child>
-	<widget class="GtkLabel" id="labelerrorvote">
-	  <property name="width_request">57</property>
-	  <property name="height_request">17</property>
-	  <property name="visible">True</property>
-	  <property name="label" translatable="yes"></property>
-	  <property name="use_underline">False</property>
-	  <property name="use_markup">False</property>
-	  <property name="justify">GTK_JUSTIFY_LEFT</property>
-	  <property name="wrap">False</property>
-	  <property name="selectable">False</property>
-	  <property name="xalign">0.5</property>
-	  <property name="yalign">0.5</property>
-	  <property name="xpad">0</property>
-	  <property name="ypad">0</property>
-	  <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-	  <property name="width_chars">-1</property>
-	  <property name="single_line_mode">False</property>
-	  <property name="angle">0</property>
-	</widget>
-	<packing>
-	  <property name="x">352</property>
-	  <property name="y">264</property>
-	</packing>
-      </child>
-=======
 	  <property name="x">24</property>
 	  <property name="y">16</property>
 	</packing>
       </child>
->>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
     </widget>
   </child>
 </widget>

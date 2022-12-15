@@ -14,7 +14,11 @@ projet2_SOURCES = \
 	callbacks.c callbacks.h \
 	BureauVote.c BureauVote.h \
 	gesrec.c gesrec.h \
+<<<<<<< HEAD
 	crudCandidat.c crudCandidat.h
+=======
+	ges_elec.c ges_elec.h
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 
 projet2_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 

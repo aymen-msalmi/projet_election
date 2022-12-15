@@ -200,12 +200,21 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
+<<<<<<< HEAD
 ACLOCAL = ${SHELL} /home/aymen/projet_election/projet2/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AUTOCONF = ${SHELL} /home/aymen/projet_election/projet2/missing autoconf
 AUTOHEADER = ${SHELL} /home/aymen/projet_election/projet2/missing autoheader
 AUTOMAKE = ${SHELL} /home/aymen/projet_election/projet2/missing automake-1.15
+=======
+ACLOCAL = ${SHELL} /home/fatma/projet_election/projet2/missing aclocal-1.15
+AMTAR = $${TAR-tar}
+AM_DEFAULT_VERBOSITY = 1
+AUTOCONF = ${SHELL} /home/fatma/projet_election/projet2/missing autoconf
+AUTOHEADER = ${SHELL} /home/fatma/projet_election/projet2/missing autoheader
+AUTOMAKE = ${SHELL} /home/fatma/projet_election/projet2/missing automake-1.15
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 AWK = mawk
 CATALOGS = 
 CATOBJEXT = .gmo
@@ -240,7 +249,11 @@ LIBOBJS =
 LIBS = 
 LTLIBOBJS = 
 MAINT = 
+<<<<<<< HEAD
 MAKEINFO = ${SHELL} /home/aymen/projet_election/projet2/missing makeinfo
+=======
+MAKEINFO = ${SHELL} /home/fatma/projet_election/projet2/missing makeinfo
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 MKDIR_P = /bin/mkdir -p
 MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
@@ -269,10 +282,17 @@ STRIP =
 USE_NLS = yes
 VERSION = 0.1
 XGETTEXT = /usr/bin/xgettext
+<<<<<<< HEAD
 abs_builddir = /home/aymen/projet_election/projet2
 abs_srcdir = /home/aymen/projet_election/projet2
 abs_top_builddir = /home/aymen/projet_election/projet2
 abs_top_srcdir = /home/aymen/projet_election/projet2
+=======
+abs_builddir = /home/fatma/projet_election/projet2
+abs_srcdir = /home/fatma/projet_election/projet2
+abs_top_builddir = /home/fatma/projet_election/projet2
+abs_top_srcdir = /home/fatma/projet_election/projet2
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -291,7 +311,11 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
+<<<<<<< HEAD
 install_sh = ${SHELL} /home/aymen/projet_election/projet2/install-sh
+=======
+install_sh = ${SHELL} /home/fatma/projet_election/projet2/install-sh
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale

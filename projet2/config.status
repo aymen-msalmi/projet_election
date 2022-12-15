@@ -437,7 +437,11 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
+<<<<<<< HEAD
 ac_pwd='/home/aymen/projet_election/projet2'
+=======
+ac_pwd='/home/fatma/projet_election/projet2'
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/bin/mkdir -p'
@@ -686,12 +690,21 @@ S["mkdir_p"]="$(MKDIR_P)"
 S["MKDIR_P"]="/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]=""
+<<<<<<< HEAD
 S["install_sh"]="${SHELL} /home/aymen/projet_election/projet2/install-sh"
 S["MAKEINFO"]="${SHELL} /home/aymen/projet_election/projet2/missing makeinfo"
 S["AUTOHEADER"]="${SHELL} /home/aymen/projet_election/projet2/missing autoheader"
 S["AUTOMAKE"]="${SHELL} /home/aymen/projet_election/projet2/missing automake-1.15"
 S["AUTOCONF"]="${SHELL} /home/aymen/projet_election/projet2/missing autoconf"
 S["ACLOCAL"]="${SHELL} /home/aymen/projet_election/projet2/missing aclocal-1.15"
+=======
+S["install_sh"]="${SHELL} /home/fatma/projet_election/projet2/install-sh"
+S["MAKEINFO"]="${SHELL} /home/fatma/projet_election/projet2/missing makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/fatma/projet_election/projet2/missing autoheader"
+S["AUTOMAKE"]="${SHELL} /home/fatma/projet_election/projet2/missing automake-1.15"
+S["AUTOCONF"]="${SHELL} /home/fatma/projet_election/projet2/missing autoconf"
+S["ACLOCAL"]="${SHELL} /home/fatma/projet_election/projet2/missing aclocal-1.15"
+>>>>>>> 680a2a4b1b96777c30aad29dba270fbc626c19b0
 S["VERSION"]="0.1"
 S["PACKAGE"]="projet2"
 S["CYGPATH_W"]="echo"
